@@ -78,8 +78,8 @@ export const EQUIPMENT_INVENTORY: EquipmentInventory[] = [
 export const PROJECTS_DATA: Project[] = [
   {
     id: 'vlora-airport-scaffolding',
-    name: 'Vlora International Airport Facade Scaffolding',
-    nameAl: 'Aeroporti i Vlorës – Skeleri Fasade',
+    name: 'Scaffolding',
+    nameAl: 'Skeleri',
     location: 'Vlorë International Airport',
     year: '2023 - 2024',
     category: 'Infrastructure',
