@@ -431,7 +431,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       items: [
         {
           number: '01',
-          title: 'Ndërtim Banesash & Soliterë',
+          title: 'Ndërtim Banesash',
           description: 'Kulla banimi luksoze, komplekse rezidenciale dhe hapësira moderne urbane të ndërtuara me precizion strukturor dhe izolim akustik.',
           features: ['Kulla banimi me densitet të lartë', 'Korniza strukturore antisizmike C30/37', 'Garazhe nëntokësore me shumë nivele', 'Përfundime strukturore me çelës në dorë']
         },
