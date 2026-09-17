@@ -126,7 +126,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
             <span className="text-[11px] text-neutral-400 uppercase tracking-widest mt-1">{t.hero.stat3}</span>
           </div>
           <div className="flex flex-col items-center">
-            <span className="text-2xl sm:text-3xl font-extrabold text-white font-display">Që nga 2008</span>
+            <span className="text-2xl sm:text-3xl font-extrabold text-white font-display">{t.hero.stat4Value}</span>
             <span className="text-[11px] text-neutral-400 uppercase tracking-widest mt-1">{t.hero.stat4}</span>
           </div>
         </motion.div>

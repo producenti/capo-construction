@@ -99,7 +99,9 @@ export const ContactSection: React.FC = () => {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] text-neutral-400 uppercase font-mono block">Headquarters</span>
+                  <span className="text-[10px] text-neutral-400 uppercase font-mono block">
+                    {lang === 'AL' ? 'Qendra Kryesore' : 'Headquarters'}
+                  </span>
                   <span className="text-xs font-semibold text-white">{t.contact.headquarters}</span>
                 </div>
               </div>
@@ -109,7 +111,9 @@ export const ContactSection: React.FC = () => {
                   <Phone className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] text-neutral-400 uppercase font-mono block">Engineering Phone</span>
+                  <span className="text-[10px] text-neutral-400 uppercase font-mono block">
+                    {lang === 'AL' ? 'Telefon Inxhinierik' : 'Engineering Phone'}
+                  </span>
                   <span className="text-xs font-semibold text-white">{t.contact.phone}</span>
                 </div>
               </div>
@@ -119,7 +123,9 @@ export const ContactSection: React.FC = () => {
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] text-neutral-400 uppercase font-mono block">Official Email</span>
+                  <span className="text-[10px] text-neutral-400 uppercase font-mono block">
+                    {lang === 'AL' ? 'Email Zyrtar' : 'Official Email'}
+                  </span>
                   <span className="text-xs font-semibold text-white">{t.contact.email}</span>
                 </div>
               </div>

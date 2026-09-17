@@ -82,11 +82,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           <div className="md:col-span-3 flex flex-col gap-4">
             <h4 className="text-xs font-mono uppercase tracking-widest text-white">{t.footer.contacts}</h4>
             <div className="flex flex-col gap-2 text-xs font-mono">
-              <span className="text-white font-semibold">Tirana & Regional Offices</span>
+              <span className="text-white font-semibold">{lang === 'AL' ? 'Zyrat Tiranë & Rajonale' : 'Tirana & Regional Offices'}</span>
               <a href="tel:+355694172942" className="hover:text-white transition-colors">Tel: +355 69 417 2942</a>
               <a href="tel:+355693748971" className="hover:text-white transition-colors">Tel: +355 69 374 8971</a>
               <a href="mailto:capoconstruction@yahoo.com" className="hover:text-white transition-colors">Email: capoconstruction@yahoo.com</a>
-              <span>Operacione që nga 2008</span>
+              <span>{lang === 'AL' ? 'Operacione që nga 2008' : 'Operations since 2008'}</span>
             </div>
           </div>
 

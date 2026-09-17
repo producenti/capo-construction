@@ -25,6 +25,7 @@ export interface TranslationDictionary {
     stat2: string;
     stat3: string;
     stat4: string;
+    stat4Value: string;
   };
   about: {
     tag: string;
@@ -181,7 +182,8 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       stat1: 'Years Experience',
       stat2: 'Scaffolding Fleet',
       stat3: 'Major Infrastructure',
-      stat4: 'Active Operations'
+      stat4: 'Active Operations',
+      stat4Value: 'Since 2008'
     },
     about: {
       tag: '01 / ABOUT CAPO CONSTRUCTION',
@@ -427,7 +429,8 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       stat1: 'Vjet Përvojë',
       stat2: 'Kapacitet Skelash',
       stat3: 'Projekte Infrastrukture',
-      stat4: 'Operacione me Inovacion'
+      stat4: 'Operacione me Inovacion',
+      stat4Value: 'Që nga 2008'
     },
     about: {
       tag: '01 / RRETH CAPO CONSTRUCTION',
