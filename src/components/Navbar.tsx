@@ -35,7 +35,6 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
     { name: t.nav.about, href: 'about' },
     { name: t.nav.projects, href: 'projects' },
     { name: t.nav.services, href: 'services' },
-    { name: t.nav.process, href: 'process' },
     { name: t.nav.partners, href: 'partners' },
     { name: t.nav.contact, href: 'contact' },
   ];

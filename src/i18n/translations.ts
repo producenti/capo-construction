@@ -5,7 +5,6 @@ export interface TranslationDictionary {
     projects: string;
     services: string;
     about: string;
-    process: string;
     partners: string;
     contact: string;
     startProject: string;
@@ -72,18 +71,6 @@ export interface TranslationDictionary {
       title: string;
       description: string;
       features: string[];
-    }[];
-  };
-  process: {
-    tag: string;
-    titleMain: string;
-    titleAccent: string;
-    desc: string;
-    steps: {
-      number: string;
-      title: string;
-      subtitle: string;
-      description: string;
     }[];
   };
   partners: {
@@ -163,7 +150,6 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       projects: 'Projects',
       services: 'Services',
       about: 'About',
-      process: 'Process',
       partners: 'Partners',
       contact: 'Contact',
       startProject: 'Start a Project',
@@ -291,50 +277,6 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
         }
       ]
     },
-    process: {
-      tag: '04 / CONSTRUCTION CAPABILITY & WORKFLOW',
-      titleMain: 'FROM FOUNDATION',
-      titleAccent: 'TO FINISH.',
-      desc: 'A rigorous 6-phase engineering lifecycle designed to guarantee zero structural compromises, strict timeline adherence, and long-term durability.',
-      steps: [
-        {
-          number: '01',
-          title: 'Planning & Site Surveying',
-          subtitle: 'Topographical & Geotechnical Analysis',
-          description: '3D laser scanning, soil load-bearing analysis, seismic risk modeling, and precise structural BIM drafting to ensure absolute foundation integrity.'
-        },
-        {
-          number: '02',
-          title: 'Structural Earthworks',
-          subtitle: 'Foundation Piling & Excavation',
-          description: 'Deep excavation, rock blasting, micro-piling, shotcrete anchoring, and subterranean retaining walls built for maximum ground stability.'
-        },
-        {
-          number: '03',
-          title: 'Reinforcement & Concrete Pours',
-          subtitle: 'Heavy Rebar & Monolithic Framing',
-          description: 'Precision rebar mesh binding paired with certified C30/37 high-grade monolithic concrete pours executed under controlled temperature monitors.'
-        },
-        {
-          number: '04',
-          title: 'Infrastructure & Utilities Integration',
-          subtitle: 'MEP & Civil Networks',
-          description: 'Integration of heavy drainage galleries, high-voltage conduit ducting, waterproof subterranean seals, and structural envelope conduits.'
-        },
-        {
-          number: '05',
-          title: 'Facade & Exterior Finishing',
-          subtitle: '15,000 m² Scaffolding Systems',
-          description: 'Deployment of Capo Construction scaffolding systems for curtain wall installation, insulated facade panels, and weather-proof sealing.'
-        },
-        {
-          number: '06',
-          title: 'Final Quality Inspection & Handover',
-          subtitle: 'Precision Quality Audit & Delivery',
-          description: 'Rigorous structural stress testing, ultrasonic weld inspection, compliance certification, and seamless client operational handover.'
-        }
-      ]
-    },
     partners: {
       tag: '05 / STRATEGIC ECOSYSTEM FROM OFFICIAL CATALOG',
       titleMain: 'TRUSTED THROUGH',
@@ -410,7 +352,6 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       projects: 'Projektet',
       services: 'Shërbimet',
       about: 'Rreth Nesh',
-      process: 'Procesi',
       partners: 'Partnerët',
       contact: 'Kontakt',
       startProject: 'Nis një Projekt',
@@ -535,50 +476,6 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
           title: 'Shërbime të Përgjithshme Ndërtimi',
           description: 'Kontraktime të përgjithshme EPC, menaxhim projekti, mbikëqyrje kantieri, logjistikë makinerish dhe konsulencë inxhinierike.',
           features: ['Kontraktim i plotë general EPC', 'Përdorim i flotës së makinerive të rënda', 'Siguria në kantier dhe kontroll cilësie', 'Konsulencë inxhinierike dhe auditim kostoje']
-        }
-      ]
-    },
-    process: {
-      tag: '04 / KAPACITETI NDËRTIMOR DHE PROCESI',
-      titleMain: 'NGA THEMELI',
-      titleAccent: 'NË PËRFUNDIM.',
-      desc: 'Një cikël inxhinierik prej 6 fazash strikte i projektuar për të garantuar zero kompromise strukturore, respektim afatesh dhe qëndrueshmëri afatgjatë.',
-      steps: [
-        {
-          number: '01',
-          title: 'Planifikimi & Matjet Topografike',
-          subtitle: 'Analizë Topografike & Gjeoteknike',
-          description: 'Skanim 3D me laser, analizë e aftësisë mbajtëse të tokës, modelim i rrezikut sizmik dhe hartim preciz BIM për sigurinë absolute të themelit.'
-        },
-        {
-          number: '02',
-          title: 'Punimet Strukturore të Dheut',
-          subtitle: 'Gërmime Themeli & Shtylla',
-          description: 'Gërmime të thella, shpërthime shkëmbi, mikro-shtylla, ankorim me betonsprit dhe mure mbajtëse nëntokësore për stabilitet maksimal.'
-        },
-        {
-          number: '03',
-          title: 'Armatimi & Hedhja e Betonit',
-          subtitle: 'Hekur i Rëndë & Strukturë Monolite',
-          description: 'Lidhje precize e armaturave të hekurit me beton monolit C30/37 të certifikuar nën monitorim të kontrolluar të temperaturës.'
-        },
-        {
-          number: '04',
-          title: 'Infrastruktura & Rrjetet Inxhinierike',
-          subtitle: 'Kanalizime & Rrjete Civile',
-          description: 'Integrim i galerive të drenazhit, tubacioneve të tensionit të lartë, hidroizolimeve nëntokësore dhe kanaleve mbrojtëse.'
-        },
-        {
-          number: '05',
-          title: 'Fasada & Përfundimi i Jashtëm',
-          subtitle: 'Sisteme Skelash prej 15,000 m²',
-          description: 'Montimi i skelave Capo Construction për instalimin e fasadave të varura xhami, paneleve termoizoluese dhe hidroizolimit.'
-        },
-        {
-          number: '06',
-          title: 'Inspektimi Përfundimtar & Dorëzimi',
-          subtitle: 'Auditimi i Cilësisë & Dorëzimi',
-          description: 'Testime të rrepta të ngarkesës strukturore, inspektim me ultratinguj i saldimeve, certifikim konformiteti dhe dorëzim zyrtar.'
         }
       ]
     },
