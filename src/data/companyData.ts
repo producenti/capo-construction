@@ -103,8 +103,11 @@ export const PROJECTS_DATA: Project[] = [
     image: '/images/pdf_images/extracted_p25_img1.jpeg',
     galleryImages: [
       '/images/pdf_images/extracted_p25_img1.jpeg',
+      '/images/pdf_images/extracted_p25_img2.jpeg',
       '/images/pdf_images/extracted_p26_img1.jpeg',
-      '/images/pdf_images/extracted_p27_img1.jpeg'
+      '/images/pdf_images/extracted_p26_img2.jpeg',
+      '/images/pdf_images/extracted_p27_img1.jpeg',
+      '/images/pdf_images/extracted_p27_img2.jpeg'
     ],
     featured: true
   },
@@ -132,12 +135,13 @@ export const PROJECTS_DATA: Project[] = [
       'Galeri sigurie në bashkëpunim me 2T'
     ],
     client: '2T & Albanian Road Authority',
-    image: '/images/pdf_images/extracted_p13_img1.jpeg',
+    image: '/images/pdf_images/extracted_p13_img2.jpeg',
     galleryImages: [
-      '/images/pdf_images/extracted_p13_img1.jpeg',
       '/images/pdf_images/extracted_p13_img2.jpeg',
       '/images/pdf_images/extracted_p13_img3.jpeg',
-      '/images/pdf_images/extracted_p13_img4.jpeg'
+      '/images/pdf_images/extracted_p13_img1.jpeg',
+      '/images/pdf_images/extracted_p13_img4.jpeg',
+      '/images/pdf_images/extracted_p13_img5.jpeg'
     ],
     featured: true
   },
@@ -145,13 +149,13 @@ export const PROJECTS_DATA: Project[] = [
     id: 'rolling-hills-villas',
     name: 'Rolling Hills Luxury Villas & Residences',
     nameAl: 'Vilat në Kompleksin Rolling Hills',
-    location: 'Sauk / Tiranë & Korçë',
+    location: 'Sauk / Tiranë',
     year: '2013 - 2015',
     category: 'Residential & Villas',
     shortDescription: 'Structural rebar cage assembly, concrete framing, and curb works for luxury residences in Rolling Hills.',
     shortDescriptionAl: 'Punime armaturë hekuri, struktura betoni dhe bordura për vilat luksoze në kompleksin Rolling Hills.',
-    fullDescription: 'In partnership with Classic Konstruksion and Bregu SH.A, Capo Construction executed the structural rebar binding and concrete framing for luxury villas in Rolling Hills (Sauk/Tirana) and subsequent villa developments in Korçë.',
-    fullDescriptionAl: 'Në bashkëpunim me Classic Konstruksion dhe Bregu SH.A, Capo Construction realizoi punimet e armaturës së hekurit dhe strukturat e betonit për vilat luksoze në Rolling Hills (Sauk) dhe më vonë në Korçë.',
+    fullDescription: 'In partnership with Classic Konstruksion and Bregu SH.A, Capo Construction executed the structural rebar binding and concrete framing for luxury villas in Rolling Hills (Sauk/Tirana).',
+    fullDescriptionAl: 'Në bashkëpunim me Classic Konstruksion dhe Bregu SH.A, Capo Construction realizoi punimet e armaturës së hekurit dhe strukturat e betonit për vilat luksoze në Rolling Hills (Sauk).',
     specs: [
       'Heavy structural rebar binding for villa foundations',
       'Post-tensioned concrete slab & cantilever casting',
@@ -165,13 +169,15 @@ export const PROJECTS_DATA: Project[] = [
       'Bashkëpunim afatgjatë me Classic Konstruksion & Bregu SH.A'
     ],
     client: 'Classic Konstruksion & Bregu SH.A',
-    image: '/images/pdf_images/extracted_p16_img1.jpeg',
+    image: '/images/pdf_images/extracted_p15_img3.jpeg',
     galleryImages: [
-      '/images/pdf_images/extracted_p16_img1.jpeg',
-      '/images/pdf_images/extracted_p16_img2.jpeg',
-      '/images/pdf_images/extracted_p25_img1.jpeg',
-      '/images/pdf_images/extracted_p17_img1.jpeg',
-      '/images/pdf_images/extracted_p15_img1.jpeg'
+      '/images/pdf_images/extracted_p15_img3.jpeg',
+      '/images/pdf_images/extracted_p15_img1.jpeg',
+      '/images/pdf_images/extracted_p15_img6.jpeg',
+      '/images/pdf_images/extracted_p15_img2.jpeg',
+      '/images/pdf_images/extracted_p15_img4.jpeg',
+      '/images/pdf_images/extracted_p15_img5.jpeg',
+      '/images/pdf_images/extracted_p15_img7.jpeg'
     ],
     featured: true
   },
@@ -204,21 +210,24 @@ export const PROJECTS_DATA: Project[] = [
       '/images/pdf_images/extracted_p11_img1.jpeg',
       '/images/pdf_images/extracted_p11_img2.jpeg',
       '/images/pdf_images/extracted_p11_img3.jpeg',
-      '/images/pdf_images/extracted_p12_img1.jpeg'
+      '/images/pdf_images/extracted_p11_img4.jpeg',
+      '/images/pdf_images/extracted_p12_img1.jpeg',
+      '/images/pdf_images/extracted_p12_img2.jpeg',
+      '/images/pdf_images/extracted_p12_img3.jpeg'
     ],
     featured: true
   },
   {
     id: 'pogradec-wastewater-station',
-    name: 'Wastewater Pumping Station – Pogradec, Gramsh, Korçë & Shkodër',
-    nameAl: 'Stacionet e Pompimit të Ujërave të Zeza – Pogradec, Gramsh, Korçë & Shkodër',
-    location: 'Pogradec, Gramsh, Korçë, Shkodër',
+    name: 'Wastewater Pumping Station – Pogradec & Gramsh',
+    nameAl: 'Stacioni i Pompimit të Ujërave të Zeza – Pogradec & Gramsh',
+    location: 'Pogradec & Gramsh',
     year: '2008 - Në vazhdim',
     category: 'Infrastructure',
     shortDescription: 'Structural rebar cage assembly and concrete chambers for municipal wastewater pumping stations.',
-    shortDescriptionAl: 'Punime armature dhe dhoma betoni për stacionet e pompimit të ujërave të zeza në disa qytete.',
-    fullDescription: 'In active partnership with Albstar since 2008, Capo Construction delivered heavy subterranean rebar cages, concrete pump foundations, retention basins, and treatment plant chambers across Pogradec, Gramsh, Korçë, and Shkodër.',
-    fullDescriptionAl: 'Në bashkëpunim aktiv me Albstar që nga viti 2008, Capo Construction ka realizuar armatimin e hekurit dhe strukturat e betonit për stacionet e pompimit të ujërave të zeza në Pogradec, Gramsh, Korçë dhe Shkodër.',
+    shortDescriptionAl: 'Punime armature dhe dhoma betoni për stacionet e pompimit të ujërave të zeza.',
+    fullDescription: 'In active partnership with Albstar since 2008, Capo Construction delivered heavy subterranean rebar cages, concrete pump foundations, retention basins, and treatment plant chambers in Pogradec and Gramsh.',
+    fullDescriptionAl: 'Në bashkëpunim aktiv me Albstar që nga viti 2008, Capo Construction ka realizuar armatimin e hekurit dhe strukturat e betonit për stacionet e pompimit të ujërave të zeza në Pogradec dhe Gramsh.',
     specs: [
       'Subterranean waterproof concrete pump chambers',
       'Biological treatment plant structural slabs',
@@ -235,9 +244,12 @@ export const PROJECTS_DATA: Project[] = [
     image: '/images/pdf_images/extracted_p5_img1.jpeg',
     galleryImages: [
       '/images/pdf_images/extracted_p5_img1.jpeg',
+      '/images/pdf_images/extracted_p5_img2.jpeg',
+      '/images/pdf_images/extracted_p5_img3.jpeg',
+      '/images/pdf_images/extracted_p5_img4.jpeg',
       '/images/pdf_images/extracted_p6_img1.jpeg',
-      '/images/pdf_images/extracted_p18_img1.jpeg',
-      '/images/pdf_images/extracted_p20_img1.jpeg'
+      '/images/pdf_images/extracted_p6_img2.jpeg',
+      '/images/pdf_images/extracted_p6_img3.jpeg'
     ],
     featured: true
   },
@@ -268,8 +280,11 @@ export const PROJECTS_DATA: Project[] = [
     image: '/images/pdf_images/extracted_p9_img1.jpeg',
     galleryImages: [
       '/images/pdf_images/extracted_p9_img1.jpeg',
+      '/images/pdf_images/extracted_p9_img2.jpeg',
       '/images/pdf_images/extracted_p10_img1.jpeg',
-      '/images/pdf_images/extracted_p10_img2.jpeg'
+      '/images/pdf_images/extracted_p10_img2.jpeg',
+      '/images/pdf_images/extracted_p10_img3.jpeg',
+      '/images/pdf_images/extracted_p10_img4.jpeg'
     ],
     featured: false
   },
@@ -297,9 +312,11 @@ export const PROJECTS_DATA: Project[] = [
       'Ekzekutuar me kompaninë 2T'
     ],
     client: '2T SH.P.K',
-    image: '/images/pdf_images/extracted_p14_img1.jpeg',
+    image: '/images/pdf_images/extracted_p14_img4.jpeg',
     galleryImages: [
+      '/images/pdf_images/extracted_p14_img4.jpeg',
       '/images/pdf_images/extracted_p14_img1.jpeg',
+      '/images/pdf_images/extracted_p14_img3.jpeg',
       '/images/pdf_images/extracted_p14_img2.jpeg'
     ],
     featured: false
@@ -331,7 +348,10 @@ export const PROJECTS_DATA: Project[] = [
     image: '/images/pdf_images/extracted_p16_img1.jpeg',
     galleryImages: [
       '/images/pdf_images/extracted_p16_img1.jpeg',
-      '/images/pdf_images/extracted_p16_img2.jpeg'
+      '/images/pdf_images/extracted_p16_img2.jpeg',
+      '/images/pdf_images/extracted_p17_img1.jpeg',
+      '/images/pdf_images/extracted_p17_img2.jpeg',
+      '/images/pdf_images/extracted_p17_img3.jpeg'
     ],
     featured: false
   },
@@ -359,11 +379,13 @@ export const PROJECTS_DATA: Project[] = [
       'Punime aktive në Tiranë'
     ],
     client: '5D Konstruksion',
-    image: '/images/pdf_images/extracted_p29_img1.jpeg',
+    image: '/images/pdf_images/extracted_p28_img2.jpeg',
     galleryImages: [
+      '/images/pdf_images/extracted_p28_img2.jpeg',
+      '/images/pdf_images/extracted_p29_img3.jpeg',
+      '/images/pdf_images/extracted_p29_img4.jpeg',
       '/images/pdf_images/extracted_p29_img1.jpeg',
-      '/images/pdf_images/extracted_p29_img2.jpeg',
-      '/images/pdf_images/extracted_p29_img3.jpeg'
+      '/images/pdf_images/extracted_p28_img1.jpeg'
     ],
     featured: false
   },
@@ -391,11 +413,82 @@ export const PROJECTS_DATA: Project[] = [
       'Infrastrukturë rrugore alpine me jetëgjatësi'
     ],
     client: 'Gener2 & TAP (Trans Adriatic Pipeline)',
-    image: '/images/pdf_images/extracted_p8_img1.jpeg',
+    image: '/images/pdf_images/extracted_p8_img4.jpeg',
     galleryImages: [
-      '/images/pdf_images/extracted_p8_img1.jpeg',
+      '/images/pdf_images/extracted_p8_img4.jpeg',
+      '/images/pdf_images/extracted_p8_img5.jpeg',
       '/images/pdf_images/extracted_p8_img2.jpeg',
+      '/images/pdf_images/extracted_p8_img1.jpeg',
       '/images/pdf_images/extracted_p8_img3.jpeg'
+    ],
+    featured: false
+  },
+  {
+    id: 'landfill-maliq',
+    name: 'Maliq Sanitary Landfill Infrastructure',
+    nameAl: 'Infrastruktura e Landfillit – Maliq',
+    location: 'Maliq',
+    year: '2015',
+    category: 'Infrastructure',
+    shortDescription: 'Heavy earthworks, reinforced retention structures, concrete channels, and environmental barrier containment.',
+    shortDescriptionAl: 'Punime dheu të rënda, struktura mbajtëse të armuara, kanale betoni dhe izolim mjedisor.',
+    fullDescription: 'Capo Construction executed structural concrete retaining works, drainage channels, and containment infrastructure for the municipal sanitary landfill in Maliq.',
+    fullDescriptionAl: 'Capo Construction ndërtoi strukturat e betonit të armuar, muret mbajtëse dhe kanalet e kullimit për landfillin e Maliqit sipas kërkesave teknike.',
+    specs: [
+      'Concrete retaining barriers & embankment stabilization',
+      'Environmental containment drainage channels',
+      'Heavy structural concrete pours',
+      'High-durability civil engineering standards'
+    ],
+    specsAl: [
+      'Bariera betoni dhe stabilizim skarpatash',
+      'Kanale kullimi dhe izolim mjedisor',
+      'Hedhje betoni të armuar me ngarkesë të lartë',
+      'Standarde të larta inxhinierike'
+    ],
+    client: 'Municipal Utilities & Civil Contractors',
+    image: '/images/pdf_images/extracted_p7_img5.jpeg',
+    galleryImages: [
+      '/images/pdf_images/extracted_p7_img5.jpeg',
+      '/images/pdf_images/extracted_p7_img1.jpeg',
+      '/images/pdf_images/extracted_p7_img2.jpeg',
+      '/images/pdf_images/extracted_p7_img3.jpeg',
+      '/images/pdf_images/extracted_p7_img4.jpeg'
+    ],
+    featured: false
+  },
+  {
+    id: 'depo-dinamiti-defex',
+    name: 'DEFEX Specialized Magazine Storage Facility',
+    nameAl: 'Depo Dinamiti në Bashkëpunim me DEFEX – Korçë',
+    location: 'Korçë',
+    year: '2018',
+    category: 'Tunnels & Structural Works',
+    shortDescription: 'High-security reinforced concrete blast-resistant subterranean vaults and security barriers with DEFEX.',
+    shortDescriptionAl: 'Strukturë e posaçme e blinduar me beton të armuar me rezistencë të lartë në bashkëpunim me DEFEX.',
+    fullDescription: 'Constructed in rigorous compliance with security and blast-containment regulations, Capo Construction built the reinforced concrete vaults, retaining perimeters, and specialized subterranean storage with DEFEX in Korçë.',
+    fullDescriptionAl: 'Ndërtuar në përputhje me standardet strikte të sigurisë dhe rezistencës strukturore, Capo Construction realizoi dhomat e blinduara të betonit dhe muret rrethuese me DEFEX në Korçë.',
+    specs: [
+      'High-strength reinforced concrete blast-resistant vaults',
+      'Subterranean protective containment barriers',
+      'Certified structural resistance compliance',
+      'Specialized engineering execution with DEFEX'
+    ],
+    specsAl: [
+      'Kornizë betoni i armuar me rezistencë maksimale',
+      'Bariera mbrojtëse nëntokësore',
+      'Përputhshmëri me normat strikte të sigurisë',
+      'Ekzekutim i specializuar me DEFEX'
+    ],
+    client: 'DEFEX & Defense/Mining Authorities',
+    image: '/images/pdf_images/extracted_p21_img3.jpeg',
+    galleryImages: [
+      '/images/pdf_images/extracted_p21_img3.jpeg',
+      '/images/pdf_images/extracted_p21_img5.jpeg',
+      '/images/pdf_images/extracted_p21_img1.jpeg',
+      '/images/pdf_images/extracted_p21_img2.jpeg',
+      '/images/pdf_images/extracted_p21_img4.jpeg',
+      '/images/pdf_images/extracted_p21_img6.jpeg'
     ],
     featured: false
   }
