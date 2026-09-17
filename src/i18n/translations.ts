@@ -188,7 +188,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
         'Lin - Pogradec highway bridges & underpasses',
         'Gusmar - Kuç - Tepelenë alpine highway & culverts',
         '15,000 m² certified system facade scaffolding fleet',
-        '10,000 m² timber & 500 m² metal structural formwork'
+        '12,000 m² timber & 500 m² metal structural formwork'
       ],
       inventoryTitle: 'COMPANY MATERIAL & FLEET INVENTORY',
       exploreCapabilities: 'Explore Technical Capabilities',
@@ -378,7 +378,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       titleMain: 'E ndërtuar mbi përvojë.',
       titleAccent: 'E projektuar për të ardhmen.',
       para1: 'Capo Construction ka nisur aktivitetin e ndërtimit në vitin 2008, duke u zhvilluar si një kompani e besueshme dhe e specializuar, e disponueshme në çdo territor të Shqipërisë.',
-      para2: 'Me një qasje profesionale dhe përkushtim ndaj cilësisë, kemi ndërtuar një histori të suksesshme me mbi 15,000 m² skeleri fasade të certifikuar, 10,000 m² armaturë druri, 500 m² armaturë metalike dhe 200 m² armaturë plastike. Ruajmë bashkëpunime strategjike afatgjata me kompanitë kryesore si 2T, Albstar, Gener2 & TAP, Classic Konstruksion, Bregu SH.A, PEVLAKU, BIGTAM dhe 5D Konstruksion.',
+      para2: 'Me një qasje profesionale dhe përkushtim ndaj cilësisë, kemi ndërtuar një histori të suksesshme me mbi 15,000 m² skeleri fasade të certifikuar, 12,000 m² armaturë druri, 500 m² armaturë metalike dhe 200 m² armaturë plastike. Ruajmë bashkëpunime strategjike afatgjata me kompanitë kryesore si 2T, Albstar, Gener2 & TAP, Classic Konstruksion, Bregu SH.A, PEVLAKU, BIGTAM dhe 5D Konstruksion.',
       niptTag: 'E DISPONUESHME NË ÇDO TERRITOR TË SHQIPËRISË',
       specializationsTitle: 'KAPACITETET KRYESORE DHE SEKTORËT',
       specializations: [
@@ -390,7 +390,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
         'Rruga Lin - Pogradec (nënkalime, ura & bordura)',
         'Rruga Gusmar - Kuç - Tepelenë & Depo Uji Nivicë',
         '15,000 m² skeleri fasade me standarde europiane',
-        '10,000 m² armaturë druri & 500 m² armaturë metalike'
+        '12,000 m² armaturë druri & 500 m² armaturë metalike'
       ],
       inventoryTitle: 'INVENTARI I MATERIALEVE DHE FLOTËS SË MAKINERIVE',
       exploreCapabilities: 'Eksploro Kapacitetet Teknike',

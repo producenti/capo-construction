@@ -48,7 +48,7 @@ export const EQUIPMENT_INVENTORY: EquipmentInventory[] = [
   {
     name: 'Wooden Structural Formwork',
     nameAl: 'Armaturë Druri Strukturore',
-    quantity: '10,000 m²',
+    quantity: '12,000 m²',
     description: 'High-grade timber panels and formwork for concrete slabs, beams, and columns.',
     descriptionAl: 'Panele druri me cilësi të lartë për hedhjen e betonit në pllaka, trare dhe kollona.'
   },
