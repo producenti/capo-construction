@@ -78,31 +78,21 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           
-          {/* Brand Logo */}
-          <button 
+          {/* Brand Logo — Text Only */}
+          <button
             onClick={() => {
               onNavigate('hero');
               setMobileMenuOpen(false);
             }}
-            className="flex items-center gap-3 group text-left focus:outline-none"
+            className="flex items-center group text-left focus:outline-none"
           >
-            <div className={`w-11 h-11 rounded-xl p-1 border flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-md overflow-hidden shrink-0 ${
-              isHovered ? 'bg-white border-black/15 shadow-sm' : 'bg-white border-white/20'
+            <span className={`font-condensed text-2xl sm:text-3xl tracking-[0.12em] leading-none transition-colors duration-300 ${
+              isHovered
+                ? 'text-black group-hover:text-neutral-700'
+                : 'text-white group-hover:text-neutral-300'
             }`}>
-              <img src="/logo.png" alt="Capo Construction Logo" className="w-full h-full object-contain" />
-            </div>
-            <div className="flex flex-col">
-              <span className={`font-extrabold tracking-[0.2em] text-sm font-display transition-colors duration-300 ${
-                isHovered ? 'text-black group-hover:text-neutral-700' : 'text-white group-hover:text-neutral-300'
-              }`}>
-                CAPO CONSTRUCTION
-              </span>
-              <span className={`text-[10px] tracking-widest uppercase font-mono transition-colors duration-300 ${
-                isHovered ? 'text-neutral-600' : 'text-neutral-400'
-              }`}>
-                {t.nav.subtitle}
-              </span>
-            </div>
+              CAPO CONSTRUCTION
+            </span>
           </button>
 
           {/* Desktop Navigation Links (No borders for text) */}
