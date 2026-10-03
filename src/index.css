@@ -123,3 +123,58 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
+/* Moncon Architectural Display & Components */
+.font-condensed {
+  font-family: 'Bebas Neue', 'Oswald', -apple-system, sans-serif;
+  letter-spacing: 0.015em;
+}
+
+/* Moncon Signature Expanding Arrow Button */
+.moncon-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 26px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  color: #FFFFFF;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  cursor: pointer;
+}
+
+.moncon-btn:hover {
+  border-color: #DB192E;
+  background: rgba(219, 25, 46, 0.12);
+  color: #FFFFFF;
+  box-shadow: 0 0 24px rgba(219, 25, 46, 0.25);
+}
+
+.moncon-btn .arrow-stem {
+  display: inline-block;
+  height: 1.5px;
+  width: 22px;
+  background-color: currentColor;
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s;
+}
+
+.moncon-btn:hover .arrow-stem {
+  width: 44px;
+  background-color: #DB192E;
+}
+
+.moncon-btn .arrow-head-svg {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.moncon-btn:hover .arrow-head-svg {
+  color: #DB192E;
+  transform: translateX(2px);
+}
+
