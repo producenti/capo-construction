@@ -7,16 +7,6 @@ interface ServicesSectionProps {
   onNavigateContact: () => void;
 }
 
-const SERVICE_IMAGES: Record<string, string> = {
-  '01': '/images/pdf_images/extracted_p15_img1.jpeg', // Residential Towers
-  '02': '/images/pdf_images/extracted_p14_img1.jpeg', // Rolling Hills Luxury Villas
-  '03': '/images/pdf_images/extracted_p10_img1.jpeg', // Wastewater & Municipal Infra
-  '04': '/images/pdf_images/extracted_p7_img1.jpeg',  // Qukës-Qafë Plloçë Alpine Highway & Bridges
-  '05': '/images/pdf_images/extracted_p8_img1.jpeg',  // Heavy Concrete & Rebar Reinforcement
-  '06': '/images/pdf_images/extracted_p20_img1.jpeg', // 15,000 m² Certified Scaffolding Fleet
-  '07': '/images/pdf_images/extracted_p5_img1.jpeg',  // Panoramic Transport Tunnel
-  '08': '/images/pdf_images/extracted_p18_img1.jpeg'  // Heavy Civil Works & General Contracting
-};
 
 export const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigateContact }) => {
   const [selectedService, setSelectedService] = useState<number | null>(null);
@@ -245,17 +235,34 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({ onNavigateCont
                   </div>
                 </div>
 
-                {/* Right Column: Full-Height Project Photo */}
-                <div className="w-full lg:w-[42%] xl:w-[45%] h-72 sm:h-96 lg:h-full relative overflow-hidden bg-neutral-900 shrink-0">
-                  <motion.img
-                    key={`img-${selectedService}`}
-                    initial={{ scale: 1.06, opacity: 0.8 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-                    src={SERVICE_IMAGES[activeService.number] || '/images/pdf_images/extracted_p15_img1.jpeg'}
-                    alt={activeService.title}
-                    className="w-full h-full object-cover object-center"
-                  />
+                {/* Right Column: Monumental Outlined Number matching section style */}
+                <div className="w-full lg:w-[42%] xl:w-[45%] h-64 sm:h-80 lg:h-full relative overflow-hidden bg-[#E2DDD5]/40 border-t lg:border-t-0 lg:border-l border-black/10 flex flex-col items-center justify-center select-none shrink-0 p-8">
+                  {/* Subtle Architectural Crosshair Lines */}
+                  <div className="absolute inset-0 pointer-events-none opacity-40">
+                    <div className="absolute top-1/2 left-0 right-0 h-px bg-black/10" />
+                    <div className="absolute left-1/2 top-0 bottom-0 w-px bg-black/10" />
+                  </div>
+
+                  {/* Monumental Outlined Number in Signature Red */}
+                  <motion.span
+                    key={`number-${selectedService}`}
+                    initial={{ opacity: 0, scale: 0.9, y: 15 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-[12rem] sm:text-[18rem] md:text-[22rem] lg:text-[26rem] xl:text-[32rem] font-condensed text-outline-red select-none leading-none tracking-tight relative z-10"
+                    style={{ WebkitTextStroke: '2px #DB192E' }}
+                  >
+                    {activeService.number}
+                  </motion.span>
+
+                  {/* Subtle Subtitle / Metadata below number */}
+                  <div className="relative z-10 flex items-center gap-3 mt-2 opacity-80">
+                    <span className="w-6 h-px bg-[#DB192E]/40" />
+                    <span className="text-xs font-mono tracking-widest uppercase text-[#DB192E]">
+                      {lang === 'AL' ? `KAPITULLI ${activeService.number} • EKZEKUTIMI` : `SPECIFICATION ${activeService.number} • EXECUTION`}
+                    </span>
+                    <span className="w-6 h-px bg-[#DB192E]/40" />
+                  </div>
                 </div>
 
               </div>
