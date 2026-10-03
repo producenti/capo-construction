@@ -39,7 +39,7 @@ const jobs: Job[] = [
 ];
 
 export const CareersSection: React.FC = () => {
-  const { lang, t } = useLanguage();
+  const { lang } = useLanguage();
 
   const openMail = (subject: string) => {
     window.location.href = `mailto:${COMPANY_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
