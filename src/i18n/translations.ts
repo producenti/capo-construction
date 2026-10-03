@@ -6,6 +6,7 @@ export interface TranslationDictionary {
     services: string;
     about: string;
     partners: string;
+    careers: string;
     contact: string;
     startProject: string;
     downloadCv: string;
@@ -151,6 +152,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       services: 'Services',
       about: 'About',
       partners: 'Partners',
+      careers: 'Careers',
       contact: 'Contact',
       startProject: 'Start a Project',
       downloadCv: 'Official Catalog PDF',
@@ -353,6 +355,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       services: 'Shërbimet',
       about: 'Rreth Nesh',
       partners: 'Partnerët',
+      careers: 'Karriera',
       contact: 'Kontakt',
       startProject: 'Nis një Projekt',
       downloadCv: 'Katalogu Zyrtar (PDF)',

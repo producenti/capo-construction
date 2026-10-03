@@ -10,6 +10,7 @@ import { PartnersSection } from './components/PartnersSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { OpeningScreen } from './components/OpeningScreen';
+import { CareersSection } from './components/CareersSection';
 
 export function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -37,7 +38,7 @@ export function App() {
     requestAnimationFrame(raf);
 
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'projects', 'services', 'partners', 'contact'];
+      const sections = ['hero', 'about', 'projects', 'services', 'partners', 'careers', 'contact'];
       const scrollPosition = window.scrollY + 250;
 
       for (const section of sections) {
@@ -88,6 +89,7 @@ export function App() {
         <ServicesSection onNavigateContact={() => scrollToSection('contact')} />
         <PartnersSection />
         <FullscreenStatement />
+        <CareersSection />
         <ContactSection />
       </main>
 
