@@ -9,6 +9,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { lang, setLang, t } = useLanguage();
 
@@ -18,6 +19,19 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      // Check if cursor is at the top part of the screen (top bar area)
+      if (e.clientY <= 85) {
+        setIsHovered(true);
+      } else {
+        setIsHovered(false);
+      }
+    };
+    window.addEventListener('mousemove', handleMouseMove);
+    return () => window.removeEventListener('mousemove', handleMouseMove);
   }, []);
 
   useEffect(() => {
@@ -41,20 +55,26 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
 
   return (
     <>
-      {/* Full-screen Dark Scrim for Mobile Menu */}
+      {/* Full-screen Dark Scrim for Mobile Menu (No blur) */}
       {mobileMenuOpen && (
         <div 
-          className="md:hidden fixed inset-0 bg-black/90 backdrop-blur-xl z-40 transition-opacity duration-300"
+          className="md:hidden fixed inset-0 bg-black/90 z-40 transition-opacity duration-300"
           onClick={() => setMobileMenuOpen(false)}
           aria-hidden="true"
         />
       )}
 
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-8 ${
-        isScrolled || mobileMenuOpen
-          ? 'bg-[#0A0A0C]/95 backdrop-blur-xl border-b border-white/10 shadow-2xl py-3 sm:py-3.5' 
-          : 'bg-gradient-to-b from-[#0A0A0C]/95 via-[#0A0A0C]/60 to-transparent backdrop-blur-[2px] py-4 sm:py-6 border-b border-transparent'
-      }`}>
+      <header 
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-8 ${
+          isHovered
+            ? 'bg-white border-b border-black/10 shadow-lg'
+            : isScrolled || mobileMenuOpen
+              ? 'bg-[#0A0A0C] border-b border-white/10 shadow-2xl' 
+              : 'bg-gradient-to-b from-[#0A0A0C]/95 via-[#0A0A0C]/60 to-transparent border-b border-transparent'
+        } ${isScrolled || mobileMenuOpen ? 'py-3 sm:py-3.5' : 'py-4 sm:py-6'}`}
+      >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           
           {/* Brand Logo */}
@@ -65,33 +85,39 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
             }}
             className="flex items-center gap-3 group text-left focus:outline-none"
           >
-            <div className="w-11 h-11 rounded-xl bg-white p-1 backdrop-blur-md border border-white/20 flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-md overflow-hidden shrink-0">
+            <div className={`w-11 h-11 rounded-xl p-1 border flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-md overflow-hidden shrink-0 ${
+              isHovered ? 'bg-white border-black/15 shadow-sm' : 'bg-white border-white/20'
+            }`}>
               <img src="/logo.png" alt="Capo Construction Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
-              <span className="font-extrabold tracking-[0.2em] text-sm text-white font-display group-hover:text-neutral-300 transition-colors">
+              <span className={`font-extrabold tracking-[0.2em] text-sm font-display transition-colors duration-300 ${
+                isHovered ? 'text-black group-hover:text-neutral-700' : 'text-white group-hover:text-neutral-300'
+              }`}>
                 CAPO CONSTRUCTION
               </span>
-              <span className="text-[10px] text-neutral-400 tracking-widest uppercase font-mono">
+              <span className={`text-[10px] tracking-widest uppercase font-mono transition-colors duration-300 ${
+                isHovered ? 'text-neutral-600' : 'text-neutral-400'
+              }`}>
                 {t.nav.subtitle}
               </span>
             </div>
           </button>
 
-          {/* Desktop Navigation Pill */}
-          <nav className={`hidden md:flex items-center gap-1 px-4 py-2 rounded-full transition-all duration-500 ${
-            isScrolled 
-              ? 'bg-white/10 backdrop-blur-md border border-white/10 shadow-inner' 
-              : 'bg-white/5 backdrop-blur-md border border-white/10'
-          }`}>
+          {/* Desktop Navigation Links (No borders for text) */}
+          <nav className="hidden md:flex items-center gap-6 lg:gap-8 transition-colors duration-300">
             {navLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => onNavigate(link.href)}
-                className={`px-4 py-2 text-xs font-medium tracking-wider uppercase transition-all duration-300 rounded-full ${
-                  activeSection === link.href
-                    ? 'text-white bg-white/20 shadow-inner font-semibold'
-                    : 'text-neutral-300 hover:text-white hover:bg-white/10'
+                className={`py-1 text-xs font-semibold tracking-wider uppercase transition-colors duration-300 ${
+                  isHovered
+                    ? activeSection === link.href
+                      ? 'text-black font-extrabold'
+                      : 'text-neutral-600 hover:text-black'
+                    : activeSection === link.href
+                      ? 'text-white font-extrabold'
+                      : 'text-neutral-300 hover:text-white'
                 }`}
               >
                 {link.name}
@@ -102,14 +128,22 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
           {/* CTA Button & Language Switcher */}
           <div className="hidden md:flex items-center gap-3">
             
-            {/* Language Toggle Pill */}
-            <div className="flex items-center p-1 rounded-full glass-card border border-white/15 text-xs font-mono">
+            {/* Language Toggle Pill (Border preserved) */}
+            <div className={`flex items-center p-1 rounded-full text-xs font-mono transition-all duration-300 ${
+              isHovered
+                ? 'border border-black/25 bg-black/5'
+                : 'border border-white/20 bg-black/30'
+            }`}>
               <button
                 onClick={() => setLang('EN')}
                 className={`px-3 py-1 rounded-full transition-all duration-300 ${
                   lang === 'EN'
-                    ? 'bg-white text-black font-extrabold shadow-md'
-                    : 'text-neutral-400 hover:text-white'
+                    ? isHovered
+                      ? 'bg-black text-white font-extrabold shadow-sm'
+                      : 'bg-white text-black font-extrabold shadow-md'
+                    : isHovered
+                      ? 'text-neutral-600 hover:text-black font-medium'
+                      : 'text-neutral-400 hover:text-white font-medium'
                 }`}
               >
                 EN
@@ -118,17 +152,26 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
                 onClick={() => setLang('AL')}
                 className={`px-3 py-1 rounded-full transition-all duration-300 ${
                   lang === 'AL'
-                    ? 'bg-white text-black font-extrabold shadow-md'
-                    : 'text-neutral-400 hover:text-white'
+                    ? isHovered
+                      ? 'bg-black text-white font-extrabold shadow-sm'
+                      : 'bg-white text-black font-extrabold shadow-md'
+                    : isHovered
+                      ? 'text-neutral-600 hover:text-black font-medium'
+                      : 'text-neutral-400 hover:text-white font-medium'
                 }`}
               >
                 AL
               </button>
             </div>
 
+            {/* START A PROJECT Button (Border preserved) */}
             <button
               onClick={() => onNavigate('contact')}
-              className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black font-medium text-xs tracking-wider uppercase transition-all duration-300 hover:bg-neutral-200 hover:scale-[1.02] shadow-lg shadow-white/5 active:scale-95"
+              className={`group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-medium text-xs tracking-wider uppercase transition-all duration-300 active:scale-95 ${
+                isHovered
+                  ? 'bg-black text-white border border-black hover:bg-neutral-800 shadow-md shadow-black/10'
+                  : 'bg-white text-black border border-white hover:bg-neutral-200 shadow-lg shadow-white/5'
+              }`}
             >
               <span>{t.nav.startProject}</span>
               <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -138,16 +181,26 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
           {/* Mobile Hamburger Menu */}
           <div className="flex md:hidden items-center gap-2">
             {/* Mobile Language Switcher */}
-            <div className="flex items-center p-0.5 rounded-full bg-white/10 border border-white/20 text-[11px] font-mono">
+            <div className={`flex items-center p-0.5 rounded-full text-[11px] font-mono transition-colors duration-300 ${
+              isHovered ? 'border border-black/25 bg-black/5' : 'border border-white/20 bg-white/10'
+            }`}>
               <button
                 onClick={() => setLang('EN')}
-                className={`px-2 py-0.5 rounded-full ${lang === 'EN' ? 'bg-white text-black font-bold shadow-sm' : 'text-neutral-400'}`}
+                className={`px-2 py-0.5 rounded-full transition-colors ${
+                  lang === 'EN'
+                    ? isHovered ? 'bg-black text-white font-bold shadow-sm' : 'bg-white text-black font-bold shadow-sm'
+                    : isHovered ? 'text-neutral-600' : 'text-neutral-400'
+                }`}
               >
                 EN
               </button>
               <button
                 onClick={() => setLang('AL')}
-                className={`px-2 py-0.5 rounded-full ${lang === 'AL' ? 'bg-white text-black font-bold shadow-sm' : 'text-neutral-400'}`}
+                className={`px-2 py-0.5 rounded-full transition-colors ${
+                  lang === 'AL'
+                    ? isHovered ? 'bg-black text-white font-bold shadow-sm' : 'bg-white text-black font-bold shadow-sm'
+                    : isHovered ? 'text-neutral-600' : 'text-neutral-400'
+                }`}
               >
                 AL
               </button>
@@ -155,7 +208,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, onNavigate }) => 
 
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="w-10 h-10 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white focus:outline-none active:scale-95 transition-transform"
+              className={`w-10 h-10 rounded-full flex items-center justify-center focus:outline-none active:scale-95 transition-all duration-300 ${
+                isHovered
+                  ? 'text-black border border-black/20 bg-black/5 hover:bg-black/10'
+                  : 'text-white border border-white/20 bg-white/10 hover:bg-white/15'
+              }`}
               aria-label="Toggle Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

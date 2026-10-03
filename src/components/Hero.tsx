@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowDown, FileText, Play, Pause } from 'lucide-react';
+import { ArrowDown, FileText } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { COMPANY_DETAILS } from '../data/companyData';
 
@@ -12,7 +12,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   const { scrollY } = useScroll();
   const { lang, t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
 
   // Auto-play immediately on mount without delay
   useEffect(() => {
@@ -24,17 +23,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   // Parallax subtle shifts
   const opacity = useTransform(scrollY, [0, 600], [1, 0.2]);
   const y = useTransform(scrollY, [0, 600], [0, 60]);
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
 
   const isAl = lang === 'AL';
 
@@ -75,58 +63,11 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         <div className="w-px h-full bg-white" />
       </div>
 
-      {/* Top Architectural Meta Bar (Hidden on mobile as requested) */}
-      <motion.div 
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 w-full hidden md:flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/15 text-[11px] font-mono tracking-widest uppercase text-neutral-300"
-      >
-        <div className="flex items-center gap-3">
-          <span className="w-2 h-2 rounded-full bg-[#DB192E] animate-pulse" />
-          <span className="text-white font-semibold">CAPO CONSTRUCTION</span>
-          <span className="text-neutral-500">•</span>
-          <span className="text-neutral-300">
-            {isAl ? 'SHQIPËRI • QË NGA 2001' : 'ALBANIA • EST. 2001'}
-          </span>
-        </div>
-
-        <div className="flex items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 border border-white/20 text-[10px] text-white">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            {isAl ? 'E DISPONUESHME NË ÇDO TERRITOR TË SHQIPËRISË' : 'AVAILABLE IN EVERY TERRITORY OF ALBANIA'}
-          </span>
-
-          {/* Video Play/Pause Toggle */}
-          <button 
-            onClick={togglePlay}
-            className="pointer-events-auto px-2.5 py-1 rounded-full bg-black/40 border border-white/25 flex items-center gap-1.5 text-[10px] text-neutral-300 hover:text-white hover:bg-white/10 transition-colors"
-            title={isPlaying ? "Pause Background Video" : "Play Background Video"}
-            aria-label={isPlaying ? "Pause Background Video" : "Play Background Video"}
-          >
-            {isPlaying ? <Pause className="w-2.5 h-2.5" /> : <Play className="w-2.5 h-2.5" />}
-            <span className="hidden sm:inline font-mono">{isPlaying ? 'PAUSE' : 'PLAY'}</span>
-          </button>
-        </div>
-      </motion.div>
-
       {/* Main Monumental Composition (Moncon Style Full-Screen Lockup) */}
       <motion.div 
         style={{ opacity, y }}
         className="relative z-10 my-auto py-10 sm:py-16 flex flex-col justify-center max-w-6xl"
       >
-        {/* Category Pill Tag */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mb-4 sm:mb-6"
-        >
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 border border-white/25 text-neutral-200 text-xs font-mono tracking-widest uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#DB192E]" />
-            {isAl ? 'INFRASTRUKTURË • SKELERI' : 'INFRASTRUCTURE • SCAFFOLDING'}
-          </span>
-        </motion.div>
 
         {/* Monumental Condensed Headline */}
         <motion.h1 
