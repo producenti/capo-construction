@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, MapPin, Phone, Mail, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -92,42 +92,36 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            {/* Direct Contact Hub */}
-            <div className="flex flex-col gap-4 p-6 rounded-3xl glass-card border border-white/10">
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-2xl glass-nav flex items-center justify-center text-white shrink-0">
-                  <MapPin className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-[10px] text-neutral-400 uppercase font-mono block">
-                    {lang === 'AL' ? 'Qendra Kryesore' : 'Headquarters'}
-                  </span>
-                  <span className="text-xs font-semibold text-white">{t.contact.headquarters}</span>
-                </div>
+            {/* Direct Contact Info - Pure Text */}
+            <div className="flex flex-col gap-6 pt-2">
+              <div className="flex flex-col gap-1.5">
+                <span className="text-[11px] text-neutral-400 uppercase font-mono tracking-widest">
+                  {lang === 'AL' ? 'Qendra Kryesore' : 'Headquarters'}
+                </span>
+                <span className="text-base sm:text-lg font-semibold text-white">
+                  {t.contact.headquarters}
+                </span>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-2xl glass-nav flex items-center justify-center text-white shrink-0">
-                  <Phone className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-[10px] text-neutral-400 uppercase font-mono block">
-                    {lang === 'AL' ? 'Telefon Inxhinierik' : 'Engineering Phone'}
-                  </span>
-                  <span className="text-xs font-semibold text-white">{t.contact.phone}</span>
-                </div>
+              <div className="flex flex-col gap-1.5">
+                <span className="text-[11px] text-neutral-400 uppercase font-mono tracking-widest">
+                  {lang === 'AL' ? 'Telefon Inxhinierik' : 'Engineering Phone'}
+                </span>
+                <span className="text-base sm:text-lg font-semibold text-white">
+                  {t.contact.phone}
+                </span>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="w-10 h-10 rounded-2xl glass-nav flex items-center justify-center text-white shrink-0">
-                  <Mail className="w-4 h-4" />
-                </div>
-                <div>
-                  <span className="text-[10px] text-neutral-400 uppercase font-mono block">
-                    {lang === 'AL' ? 'Email Zyrtar' : 'Official Email'}
-                  </span>
-                  <span className="text-xs font-semibold text-white">{t.contact.email}</span>
-                </div>
+              <div className="flex flex-col gap-1.5">
+                <span className="text-[11px] text-neutral-400 uppercase font-mono tracking-widest">
+                  {lang === 'AL' ? 'Email Zyrtar' : 'Official Email'}
+                </span>
+                <a
+                  href={`mailto:${t.contact.email}`}
+                  className="text-base sm:text-lg font-semibold text-white hover:text-neutral-300 transition-colors w-fit"
+                >
+                  {t.contact.email}
+                </a>
               </div>
             </div>
           </motion.div>
