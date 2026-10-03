@@ -74,10 +74,10 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 flex flex-col gap-8"
           >
-            {/* Header with Monumental Outline Number 07 */}
+            {/* Header with Monumental Outline Number 06 */}
             <div className="flex items-start sm:items-center gap-4 sm:gap-6 mb-4">
               <span className="text-6xl sm:text-8xl md:text-9xl font-condensed text-outline-white select-none shrink-0 leading-none">
-                07
+                06
               </span>
               <div>
                 <div className="flex items-center gap-3 mb-2">

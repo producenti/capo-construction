@@ -77,7 +77,7 @@ export const CareersSection: React.FC<CareersSectionProps> = ({ isCareersVisible
         >
           {/* Red outline number — always red */}
           <span className="text-6xl sm:text-8xl md:text-9xl font-condensed text-outline-red select-none shrink-0 leading-none">
-            06
+            05
           </span>
           <div>
             <div className="flex items-center gap-3 mb-2">

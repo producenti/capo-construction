@@ -5,7 +5,6 @@ import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { ServicesSection } from './components/ServicesSection';
-import { FullscreenStatement } from './components/FullscreenStatement';
 import { PartnersSection } from './components/PartnersSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
@@ -100,7 +99,6 @@ export function App() {
         <ProjectsSection onNavigateContact={() => scrollToSection('contact')} />
         <ServicesSection onNavigateContact={() => scrollToSection('contact')} />
         <PartnersSection />
-        <FullscreenStatement />
         <CareersSection isCareersVisible={isCareersVisible} />
         <ContactSection />
       </main>
