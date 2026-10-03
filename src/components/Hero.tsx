@@ -1,8 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { ArrowDown, FileText } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { COMPANY_DETAILS } from '../data/companyData';
 
 interface HeroProps {
   onNavigate: (sectionId: string) => void;
@@ -117,16 +116,6 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                 </svg>
               </div>
             </button>
-
-            <a
-              href={COMPANY_DETAILS.pdfCatalogUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3.5 rounded-full border border-white/35 bg-transparent hover:bg-white/10 hover:border-white/60 text-xs font-mono tracking-wider uppercase text-white transition-all flex items-center gap-2"
-            >
-              <FileText className="w-3.5 h-3.5 text-neutral-300" />
-              <span>{isAl ? 'Katalogu PDF' : 'Catalog PDF'}</span>
-            </a>
           </div>
         </motion.div>
       </motion.div>
