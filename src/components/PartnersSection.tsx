@@ -1,45 +1,46 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { PARTNERS_LIST } from '../data/companyData';
-import { ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export const PartnersSection: React.FC = () => {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
     <section id="partners" className="relative py-24 sm:py-32 px-4 sm:px-8 border-t border-white/5 bg-[#0A0A0C]">
       <div className="max-w-7xl mx-auto">
         
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        {/* Header with Monumental Outline Number 04 */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card border border-white/15 text-neutral-400 text-xs font-mono tracking-widest uppercase mb-4"
-          >
-            <ShieldCheck className="w-3.5 h-3.5 text-neutral-300" />
-            <span>{t.partners.tag}</span>
-          </motion.div>
-
-          <motion.h2 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-4xl sm:text-6xl font-extrabold text-white tracking-tighter font-display"
+            transition={{ duration: 0.8 }}
+            className="flex items-start sm:items-center gap-4 sm:gap-8"
           >
-            {t.partners.titleMain} <span className="text-gradient">{t.partners.titleAccent}</span>
-          </motion.h2>
+            <span className="text-6xl sm:text-8xl md:text-9xl font-condensed text-outline-white select-none shrink-0 leading-none">
+              04
+            </span>
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="w-6 h-px bg-white/30" />
+                <span className="text-xs font-mono tracking-widest uppercase text-neutral-400">
+                  {lang === 'AL' ? 'EKOSISTEMI STRATEGJIK' : 'STRATEGIC ECOSYSTEM'}
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white tracking-tighter uppercase leading-[1.02]">
+                {t.partners.titleMain} <span className="text-gradient">{t.partners.titleAccent}</span>
+              </h2>
+            </div>
+          </motion.div>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-sm sm:text-base text-neutral-400 font-light mt-4"
+            className="text-sm sm:text-base text-neutral-400 font-light max-w-md"
           >
             {t.partners.desc}
           </motion.p>

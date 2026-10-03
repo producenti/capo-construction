@@ -33,32 +33,30 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ onNavigateCont
     <section id="projects" className="relative py-24 sm:py-32 px-4 sm:px-8 border-t border-white/5 bg-[#0A0A0C]">
       <div className="max-w-7xl mx-auto">
         
-        {/* Header Block */}
+        {/* Header Block with Monumental Outline Number 02 */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-8">
-          <div>
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7 }}
-              className="flex items-center gap-3 mb-4"
-            >
-              <span className="w-8 h-px bg-white/30" />
-              <span className="text-xs font-mono tracking-widest uppercase text-neutral-400">
-                {t.projects.tag}
-              </span>
-            </motion.div>
-
-            <motion.h2 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tighter"
-            >
-              {t.projects.titleMain} <span className="text-gradient">{t.projects.titleAccent}</span>
-            </motion.h2>
-          </div>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="flex items-start sm:items-center gap-4 sm:gap-8"
+          >
+            <span className="text-6xl sm:text-8xl md:text-9xl font-condensed text-outline-white select-none shrink-0 leading-none">
+              02
+            </span>
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="w-6 h-px bg-white/30" />
+                <span className="text-xs font-mono tracking-widest uppercase text-neutral-400">
+                  {lang === 'AL' ? 'EKSPOZITA E PROJEKTEVE NGA CV ZYRTARE' : 'PORTFOLIO EXHIBIT FROM OFFICIAL CV'}
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white tracking-tighter uppercase leading-[1.02]">
+                {t.projects.titleMain} <span className="text-gradient">{t.projects.titleAccent}</span>
+              </h2>
+            </div>
+          </motion.div>
 
           <div className="flex flex-col gap-4 max-w-md">
             <motion.p 

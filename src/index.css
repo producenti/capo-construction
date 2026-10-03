@@ -129,6 +129,15 @@ html.lenis, html.lenis body {
   letter-spacing: 0.015em;
 }
 
+/* Monadnock-style Monumental White Outline Numbers (Razor-thin white lines, no red) */
+.text-outline-white {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.8);
+  font-family: 'Bebas Neue', 'Oswald', -apple-system, sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 0.88;
+}
+
 /* Moncon Signature Expanding Arrow Button (No blur background) */
 .moncon-btn {
   display: inline-flex;

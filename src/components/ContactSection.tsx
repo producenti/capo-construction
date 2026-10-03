@@ -74,18 +74,23 @@ export const ContactSection: React.FC = () => {
             transition={{ duration: 0.8 }}
             className="lg:col-span-5 flex flex-col gap-8"
           >
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <span className="w-8 h-px bg-white/30" />
-                <span className="text-xs font-mono tracking-widest uppercase text-neutral-400">
-                  {t.contact.tag}
-                </span>
+            {/* Header with Monumental Outline Number 06 */}
+            <div className="flex items-start sm:items-center gap-4 sm:gap-6 mb-4">
+              <span className="text-6xl sm:text-8xl md:text-9xl font-condensed text-outline-white select-none shrink-0 leading-none">
+                06
+              </span>
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="w-6 h-px bg-white/30" />
+                  <span className="text-xs font-mono tracking-widest uppercase text-neutral-400">
+                    {lang === 'AL' ? 'KËRKESË PËR PROJEKT & KONTAKT' : 'PROJECT INQUIRY & CONTACT'}
+                  </span>
+                </div>
+                <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tighter uppercase leading-[1.02]">
+                  {t.contact.titleMain} <br />
+                  <span className="text-gradient">{t.contact.titleAccent}</span>
+                </h2>
               </div>
-
-              <h2 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tighter font-display leading-[1.05]">
-                {t.contact.titleMain} <br />
-                <span className="text-gradient">{t.contact.titleAccent}</span>
-              </h2>
             </div>
 
             <p className="text-base text-neutral-300 font-light leading-relaxed">

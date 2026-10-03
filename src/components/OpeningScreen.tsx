@@ -54,27 +54,6 @@ export const OpeningScreen: React.FC<OpeningScreenProps> = ({ onComplete }) => {
             >
               CAPO
             </motion.div>
-
-            {/* Subtitle Accent Line */}
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="flex items-center justify-center gap-3 mt-4 sm:mt-6 text-xs sm:text-sm font-mono tracking-[0.35em] uppercase text-neutral-400"
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-[#DB192E] animate-pulse" />
-              <span className="text-white font-medium">CONSTRUCTION</span>
-              <span className="text-neutral-600">•</span>
-              <span className="text-neutral-400">EST. 2001</span>
-            </motion.div>
-
-            {/* Fine Architectural Underline */}
-            <motion.div 
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: 1 }}
-              transition={{ duration: 1.2, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-              className="w-32 sm:w-48 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent mt-6"
-            />
           </div>
         </motion.div>
       )}

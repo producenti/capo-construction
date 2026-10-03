@@ -8,38 +8,34 @@ interface AboutSectionProps {
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate }) => {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
     <section id="about" className="relative py-24 sm:py-32 px-4 sm:px-8 border-t border-white/5 bg-[#0A0A0C]">
       <div className="max-w-7xl mx-auto">
         
-        {/* Section Tag */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7 }}
-          className="flex items-center gap-3 mb-6"
-        >
-          <span className="w-8 h-px bg-white/30" />
-          <span className="text-xs font-mono tracking-widest uppercase text-neutral-400">
-            {t.about.tag}
-          </span>
-        </motion.div>
-
-        {/* Editorial Heading */}
+        {/* Monadnock-Style Section Header with Outline Number 01 */}
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="max-w-4xl mb-16"
+          transition={{ duration: 0.8 }}
+          className="flex items-start sm:items-center gap-4 sm:gap-8 mb-16 max-w-5xl"
         >
-          <h2 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tighter leading-[1.05]">
-            {t.about.titleMain} <br />
-            <span className="text-gradient">{t.about.titleAccent}</span>
-          </h2>
+          <span className="text-6xl sm:text-8xl md:text-9xl font-condensed text-outline-white select-none shrink-0 leading-none">
+            01
+          </span>
+          <div>
+            <div className="flex items-center gap-3 mb-2">
+              <span className="w-6 h-px bg-white/30" />
+              <span className="text-xs font-mono tracking-widest uppercase text-neutral-400">
+                {lang === 'AL' ? 'RRETH CAPO CONSTRUCTION' : 'ABOUT CAPO CONSTRUCTION'}
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white tracking-tighter uppercase leading-[1.02]">
+              {t.about.titleMain} <span className="text-gradient">{t.about.titleAccent}</span>
+            </h2>
+          </div>
         </motion.div>
 
         {/* Grid Container */}

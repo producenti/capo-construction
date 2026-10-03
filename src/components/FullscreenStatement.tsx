@@ -4,7 +4,7 @@ import { useLanguage } from '../context/LanguageContext';
 
 export const FullscreenStatement: React.FC = () => {
   const { scrollYProgress } = useScroll();
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   const bgScale = useTransform(scrollYProgress, [0.4, 0.8], [1, 1.1]);
   const textY = useTransform(scrollYProgress, [0.4, 0.8], [20, -20]);
 
@@ -27,14 +27,34 @@ export const FullscreenStatement: React.FC = () => {
       {/* Dramatic Statement Content */}
       <motion.div 
         style={{ y: textY }}
-        className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-8"
+        className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center gap-6"
       >
+        {/* Monadnock-Style Outline Number 05 */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col items-center gap-3"
+        >
+          <span className="text-7xl sm:text-9xl md:text-[10rem] font-condensed text-outline-white select-none leading-none">
+            05
+          </span>
+          <div className="flex items-center gap-3">
+            <span className="w-8 h-px bg-white/30" />
+            <span className="text-xs font-mono tracking-widest uppercase text-neutral-400">
+              {lang === 'AL' ? 'STANDARDI DHE MISIONI' : 'ETHOS & STANDARDS'}
+            </span>
+            <span className="w-8 h-px bg-white/30" />
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1 }}
-          className="w-20 h-20 rounded-2xl bg-white p-2 border border-white/20 flex items-center justify-center shadow-2xl mb-2 overflow-hidden"
+          className="w-16 h-16 rounded-2xl bg-white p-2 border border-white/20 flex items-center justify-center shadow-2xl overflow-hidden"
         >
           <img src="/logo.png" alt="Capo Construction Logo" className="w-full h-full object-contain" />
         </motion.div>
