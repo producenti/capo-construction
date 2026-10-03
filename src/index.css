@@ -220,3 +220,37 @@ html.lenis, html.lenis body {
   will-change: transform;
 }
 
+/* Mobile Partner Slideshow */
+@keyframes partner-slideshow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes partner-slideshow-reverse {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-partner-slideshow {
+  display: flex;
+  width: max-content;
+  animation: partner-slideshow 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-partner-slideshow-reverse {
+  display: flex;
+  width: max-content;
+  animation: partner-slideshow-reverse 40s linear infinite;
+  will-change: transform;
+}
+
+

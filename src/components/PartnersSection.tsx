@@ -71,8 +71,8 @@ export const PartnersSection: React.FC = () => {
           </motion.p>
         </div>
 
-        {/* Partners Monochromatic Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        {/* Desktop & Tablet Grid */}
+        <div className="hidden sm:grid sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {PARTNERS_LIST.map((partner, index) => (
             <motion.div
               key={partner.name}
@@ -87,6 +87,45 @@ export const PartnersSection: React.FC = () => {
               </span>
             </motion.div>
           ))}
+        </div>
+
+        {/* Mobile Version - Continuous Marquee Slideshow */}
+        <div className="sm:hidden relative -mx-4 overflow-hidden flex flex-col gap-3 py-2">
+          {/* Subtle edge fades */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-8 bg-gradient-to-r from-[#0A0A0C] to-transparent z-10" />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-8 bg-gradient-to-l from-[#0A0A0C] to-transparent z-10" />
+
+          {/* Row 1 - Slides left */}
+          <div className="overflow-hidden w-full select-none">
+            <div className="animate-partner-slideshow flex items-center gap-3">
+              {[...PARTNERS_LIST.slice(0, 12), ...PARTNERS_LIST.slice(0, 12)].map((partner, idx) => (
+                <div
+                  key={`m1-${idx}`}
+                  className="px-5 py-3 rounded-xl glass-card border border-white/10 shrink-0 flex items-center justify-center min-w-[140px] h-[60px]"
+                >
+                  <span className="text-base font-extrabold tracking-tight text-neutral-300 font-display text-center whitespace-nowrap">
+                    {partner.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Row 2 - Slides right */}
+          <div className="overflow-hidden w-full select-none">
+            <div className="animate-partner-slideshow-reverse flex items-center gap-3">
+              {[...PARTNERS_LIST.slice(12), ...PARTNERS_LIST.slice(12)].map((partner, idx) => (
+                <div
+                  key={`m2-${idx}`}
+                  className="px-5 py-3 rounded-xl glass-card border border-white/10 shrink-0 flex items-center justify-center min-w-[140px] h-[60px]"
+                >
+                  <span className="text-base font-extrabold tracking-tight text-neutral-300 font-display text-center whitespace-nowrap">
+                    {partner.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
       </div>
