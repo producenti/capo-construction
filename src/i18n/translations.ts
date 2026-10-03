@@ -345,7 +345,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       sitemap: 'Sitemap',
       contacts: 'Direct Contacts',
       downloadPdf: 'Download Official Catalog (PDF)',
-      rights: 'CAPO CONSTRUCTION SH.P.K. All rights reserved. Available in every territory of Albania.',
+      rights: 'CAPO CONSTRUCTION SH.P.K. All rights reserved.',
       backToTop: 'Back to top'
     }
   },
@@ -548,7 +548,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       sitemap: 'Harta e Faqes',
       contacts: 'Kontaktet Direkte',
       downloadPdf: 'Shkarko Katalogun Zyrtar (PDF)',
-      rights: 'CAPO CONSTRUCTION SH.P.K. Të gjitha të drejtat të rezervuara. E disponueshme në çdo territor të Shqipërisë.',
+      rights: 'CAPO CONSTRUCTION SH.P.K. Të gjitha të drejtat të rezervuara.',
       backToTop: 'Kthehu lart'
     }
   }

@@ -15,6 +15,7 @@ export function App() {
   const [activeSection, setActiveSection] = useState('hero');
   const [isCareersVisible, setIsCareersVisible] = useState(false);
   const [isAboutVisible, setIsAboutVisible] = useState(false);
+  const [isFooterVisible, setIsFooterVisible] = useState(false);
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
@@ -84,6 +85,17 @@ export function App() {
     return () => observer.disconnect();
   }, []);
 
+  useEffect(() => {
+    const el = document.getElementById('footer');
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsFooterVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
@@ -116,7 +128,7 @@ export function App() {
       </main>
 
       {/* Minimal Footer */}
-      <Footer onNavigate={scrollToSection} />
+      <Footer onNavigate={scrollToSection} isFooterVisible={isFooterVisible} />
     </div>
   );
 }

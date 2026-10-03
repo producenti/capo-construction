@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, MapPin, Phone, Mail, CheckCircle2 } from 'lucide-react';
 import confetti from 'canvas-confetti';
-import { REGIONS_LIST } from '../data/companyData';
 import { useLanguage } from '../context/LanguageContext';
 
 export const ContactSection: React.FC = () => {
@@ -93,10 +92,6 @@ export const ContactSection: React.FC = () => {
               </div>
             </div>
 
-            <p className="text-base text-neutral-300 font-light leading-relaxed">
-              {t.contact.desc}
-            </p>
-
             {/* Direct Contact Hub */}
             <div className="flex flex-col gap-4 p-6 rounded-3xl glass-card border border-white/10">
               <div className="flex items-center gap-4">
@@ -133,22 +128,6 @@ export const ContactSection: React.FC = () => {
                   </span>
                   <span className="text-xs font-semibold text-white">{t.contact.email}</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Regional Coverage Tags */}
-            <div>
-              <h4 className="text-xs font-mono uppercase tracking-widest text-neutral-400 mb-3">{t.contact.regionsTitle}</h4>
-              <div className="flex flex-wrap gap-2">
-                {REGIONS_LIST.map((reg, idx) => (
-                  <span 
-                    key={idx} 
-                    className="px-4 py-2 rounded-full glass-card border border-white/10 text-xs text-neutral-200 font-mono flex items-center gap-2"
-                  >
-                    <span>📍</span>
-                    <span>{lang === 'AL' ? reg.cityAl : reg.city}</span>
-                  </span>
-                ))}
               </div>
             </div>
           </motion.div>
