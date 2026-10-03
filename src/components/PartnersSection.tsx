@@ -7,8 +7,31 @@ export const PartnersSection: React.FC = () => {
   const { lang, t } = useLanguage();
 
   return (
-    <section id="partners" className="relative py-24 sm:py-32 px-4 sm:px-8 border-t border-white/5 bg-[#0A0A0C]">
-      <div className="max-w-7xl mx-auto">
+    <section id="partners" className="relative py-24 sm:py-32 px-4 sm:px-8 border-t border-white/5 bg-[#0A0A0C] overflow-hidden">
+      {/* Architectural Ambient Grid in Background */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        {/* Vertical Grid Lines matching opening screen */}
+        <div className="absolute inset-0 flex justify-between px-4 sm:px-8 lg:px-12 opacity-[0.06]">
+          <div className="w-px h-full bg-white" />
+          <div className="w-px h-full bg-white hidden sm:block" />
+          <div className="w-px h-full bg-white hidden md:block" />
+          <div className="w-px h-full bg-white hidden lg:block" />
+          <div className="w-px h-full bg-white" />
+          <div className="w-px h-full bg-white hidden lg:block" />
+          <div className="w-px h-full bg-white hidden md:block" />
+          <div className="w-px h-full bg-white hidden sm:block" />
+          <div className="w-px h-full bg-white" />
+        </div>
+        {/* Horizontal Grid Lines */}
+        <div className="absolute inset-0 flex flex-col justify-between py-12 opacity-[0.04]">
+          <div className="h-px w-full bg-white" />
+          <div className="h-px w-full bg-white" />
+          <div className="h-px w-full bg-white" />
+          <div className="h-px w-full bg-white" />
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto relative z-10">
         
         {/* Header with Monumental Outline Number 04 */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
@@ -30,7 +53,15 @@ export const PartnersSection: React.FC = () => {
                 </span>
               </div>
               <h2 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white tracking-tighter uppercase leading-[1.02]">
-                {t.partners.titleMain} <span className="text-gradient">{t.partners.titleAccent}</span>
+                {lang === 'AL' ? (
+                  <>
+                    <span className="text-[#DB192E]">E BESUAR</span> PËRMES <span className="text-gradient">{t.partners.titleAccent}</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="text-[#DB192E]">TRUSTED</span> THROUGH <span className="text-gradient">{t.partners.titleAccent}</span>
+                  </>
+                )}
               </h2>
             </div>
           </motion.div>
