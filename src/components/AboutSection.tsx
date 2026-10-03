@@ -13,29 +13,21 @@ const stats = [
     value: '25+',
     labelEN: 'Years of Engineering Experience',
     labelAL: 'Vite Eksperiencë Inxhinierike',
-    noteEN: 'Quarter century of proven execution',
-    noteAL: 'Një çerek shekulli ekzekutim i provuar',
   },
   {
     value: '15,000 m²',
     labelEN: 'Scaffolding System Capacity',
     labelAL: 'Kapacitet i Sistemit të Skelës',
-    noteEN: 'Modern European certified scaffolding',
-    noteAL: 'Skele të certifikuara sipas standardeve europiane',
   },
   {
     value: '50+',
     labelEN: 'Major Infrastructure Projects',
     labelAL: 'Projekte Kryesore Infrastrukturore',
-    noteEN: 'Roads, bridges, tunnels & civil works',
-    noteAL: 'Rrugë, ura, tunele & punime civile',
   },
   {
     value: 'Since 2001',
     labelEN: 'Active Commercial Operations',
     labelAL: 'Operacione Aktive Komerciale',
-    noteEN: 'Available in every territory of Albania',
-    noteAL: 'E disponueshme në çdo territor të Shqipërisë',
   },
 ];
 
@@ -104,27 +96,20 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ isAboutVisible = fal
             className="lg:col-span-7 flex flex-col gap-8"
           >
             <p
-              className="text-lg sm:text-xl font-light leading-relaxed"
-              style={{ color: light ? '#374151' : 'rgba(212,212,212,1)', transition: 'color 700ms ease' }}
+              className="text-base sm:text-lg lg:text-xl font-light leading-relaxed tracking-normal"
+              style={{ color: light ? '#2b2f38' : 'rgba(229,231,235,1)', transition: 'color 700ms ease' }}
             >
-              {t.about.para1}
-            </p>
-
-            <p
-              className="text-base leading-relaxed font-light"
-              style={{ color: light ? '#6b7280' : 'rgba(163,163,163,1)', transition: 'color 700ms ease' }}
-            >
-              {t.about.para2}
+              {t.about.para1} {t.about.para2}
             </p>
 
             <div className="pt-2 flex items-center">
               {/* More toggle */}
               <button
                 onClick={() => setShowMore(p => !p)}
-                className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-mono transition-colors group"
-                style={{ color: light ? '#0A0A0C' : '#FFFFFF' }}
+                className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-mono transition-colors group hover:opacity-70"
+                style={{ color: light ? '#0A0A0C' : '#FFFFFF', transition: 'color 700ms ease' }}
               >
-                <span>{lang === 'AL' ? 'Më Shumë' : 'More'}</span>
+                <span className="font-semibold">{lang === 'AL' ? 'Më Shumë' : 'More'}</span>
                 <ChevronDown
                   className={`w-3.5 h-3.5 transition-transform duration-300 ${showMore ? 'rotate-180' : ''}`}
                 />
@@ -149,25 +134,17 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ isAboutVisible = fal
                     {stats.map((stat, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center justify-between gap-4 py-4"
-                        style={{ borderBottom: light ? '1px solid rgba(0,0,0,0.05)' : '1px solid rgba(255,255,255,0.05)' }}
+                        className="flex items-center justify-between gap-4 py-3.5"
+                        style={{ borderBottom: light ? '1px solid rgba(0,0,0,0.06)' : '1px solid rgba(255,255,255,0.05)' }}
                       >
-                        <div className="flex flex-col gap-0.5">
-                          <span
-                            className="text-sm font-semibold"
-                            style={{ color: light ? '#1f2937' : 'rgba(229,229,229,1)' }}
-                          >
-                            {lang === 'AL' ? stat.labelAL : stat.labelEN}
-                          </span>
-                          <span
-                            className="text-xs font-mono"
-                            style={{ color: light ? '#9ca3af' : 'rgba(115,115,115,1)' }}
-                          >
-                            {lang === 'AL' ? stat.noteAL : stat.noteEN}
-                          </span>
-                        </div>
                         <span
-                          className="text-xl sm:text-2xl font-extrabold font-display tracking-tight shrink-0"
+                          className="text-sm font-semibold tracking-wide"
+                          style={{ color: light ? '#1f2937' : 'rgba(229,229,229,1)' }}
+                        >
+                          {lang === 'AL' ? stat.labelAL : stat.labelEN}
+                        </span>
+                        <span
+                          className="text-xl sm:text-2xl font-light tracking-tight shrink-0"
                           style={{ color: light ? '#0A0A0C' : '#FFFFFF' }}
                         >
                           {stat.value}
