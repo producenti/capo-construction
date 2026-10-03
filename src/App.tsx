@@ -9,6 +9,7 @@ import { FullscreenStatement } from './components/FullscreenStatement';
 import { PartnersSection } from './components/PartnersSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
+import { OpeningScreen } from './components/OpeningScreen';
 
 export function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -73,7 +74,9 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#0A0A0C] text-[#F3F4F6] selection:bg-neutral-800 selection:text-white relative">
-      
+      {/* Cinematic Opening Intro Curtain */}
+      <OpeningScreen />
+
       {/* Translucent Apple Floating Navigation */}
       <Navbar activeSection={activeSection} onNavigate={scrollToSection} />
 

@@ -192,8 +192,8 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       ],
       inventoryTitle: 'COMPANY MATERIAL & FLEET INVENTORY',
       exploreCapabilities: 'Explore Technical Capabilities',
-      imageTitle: 'Rolling Hills Luxury Complex',
-      imageSubtitle: 'Architectural Cantilever & Structural Frame',
+      imageTitle: 'Our Team',
+      imageSubtitle: '',
       stats: [
         { value: '25+', label: 'Years of Engineering Experience', highlight: 'Quarter century of proven execution' },
         { value: '15,000 m²', label: 'Scaffolding System Capacity', highlight: 'Modern European certified scaffolding' },
@@ -394,8 +394,8 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       ],
       inventoryTitle: 'INVENTARI I MATERIALEVE DHE FLOTËS SË MAKINERIVE',
       exploreCapabilities: 'Eksploro Kapacitetet Teknike',
-      imageTitle: 'Kompleksi i Vilave Rolling Hills',
-      imageSubtitle: 'Strukturë Betoni dhe Fasadë Xhami',
+      imageTitle: 'Ekipi Ynë',
+      imageSubtitle: '',
       stats: [
         { value: '25+', label: 'Vjet Përvojë Inxhinierike', highlight: 'Çerek shekulli ekzekutim i provuar' },
         { value: '15,000 m²', label: 'Kapacitet Sisteme Skelash', highlight: 'Skela me certifikim europian' },
