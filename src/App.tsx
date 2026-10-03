@@ -10,6 +10,7 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { OpeningScreen } from './components/OpeningScreen';
 import { CareersSection } from './components/CareersSection';
+import { ProjectSlideshow } from './components/ProjectSlideshow';
 
 export function App() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -111,6 +112,7 @@ export function App() {
         <ProjectsSection onNavigateContact={() => scrollToSection('contact')} />
         <ServicesSection onNavigateContact={() => scrollToSection('contact')} />
         <PartnersSection />
+        <ProjectSlideshow />
         <CareersSection isCareersVisible={isCareersVisible} />
         <ContactSection />
       </main>

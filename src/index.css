@@ -203,3 +203,20 @@ html.lenis, html.lenis body {
   transform: translateX(2px);
 }
 
+/* Infinite Marquee Slideshow */
+@keyframes infinite-slideshow {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-slideshow {
+  display: flex;
+  width: max-content;
+  animation: infinite-slideshow 300s linear infinite;
+  will-change: transform;
+}
+
