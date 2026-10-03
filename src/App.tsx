@@ -14,6 +14,7 @@ import { CareersSection } from './components/CareersSection';
 
 export function App() {
   const [activeSection, setActiveSection] = useState('hero');
+  const [isCareersVisible, setIsCareersVisible] = useState(false);
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
@@ -61,6 +62,17 @@ export function App() {
     };
   }, []);
 
+  useEffect(() => {
+    const el = document.getElementById('careers');
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsCareersVisible(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
@@ -89,7 +101,7 @@ export function App() {
         <ServicesSection onNavigateContact={() => scrollToSection('contact')} />
         <PartnersSection />
         <FullscreenStatement />
-        <CareersSection />
+        <CareersSection isCareersVisible={isCareersVisible} />
         <ContactSection />
       </main>
 

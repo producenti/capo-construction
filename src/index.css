@@ -138,6 +138,24 @@ html.lenis, html.lenis body {
   line-height: 0.88;
 }
 
+/* Dark variant for white/light backgrounds */
+.text-outline-dark {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.25);
+  font-family: 'Bebas Neue', 'Oswald', -apple-system, sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 0.88;
+}
+
+/* Red variant for Careers section */
+.text-outline-red {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(219, 25, 46, 0.9);
+  font-family: 'Bebas Neue', 'Oswald', -apple-system, sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 0.88;
+}
+
 /* Moncon Signature Expanding Arrow Button (No blur background) */
 .moncon-btn {
   display: inline-flex;
