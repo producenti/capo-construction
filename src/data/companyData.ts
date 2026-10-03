@@ -27,7 +27,7 @@ export interface EquipmentInventory {
 
 export const COMPANY_DETAILS = {
   name: 'Capo Construction SH.P.K',
-  foundedYear: '2008',
+  foundedYear: '2001',
   phonePrimary: '+355 69 417 2942',
   phoneSecondary: '+355 69 374 8971',
   emailPrimary: 'capoconstruction@yahoo.com',
@@ -222,12 +222,12 @@ export const PROJECTS_DATA: Project[] = [
     name: 'Wastewater Pumping Station – Pogradec & Gramsh',
     nameAl: 'Stacioni i Pompimit të Ujërave të Zeza – Pogradec & Gramsh',
     location: 'Pogradec & Gramsh',
-    year: '2008 - Në vazhdim',
+    year: '2001 - Në vazhdim',
     category: 'Infrastructure',
     shortDescription: 'Structural rebar cage assembly and concrete chambers for municipal wastewater pumping stations.',
     shortDescriptionAl: 'Punime armature dhe dhoma betoni për stacionet e pompimit të ujërave të zeza.',
-    fullDescription: 'In active partnership with Albstar since 2008, Capo Construction delivered heavy subterranean rebar cages, concrete pump foundations, retention basins, and treatment plant chambers in Pogradec and Gramsh.',
-    fullDescriptionAl: 'Në bashkëpunim aktiv me Albstar që nga viti 2008, Capo Construction ka realizuar armatimin e hekurit dhe strukturat e betonit për stacionet e pompimit të ujërave të zeza në Pogradec dhe Gramsh.',
+    fullDescription: 'In active partnership with Albstar since 2001, Capo Construction delivered heavy subterranean rebar cages, concrete pump foundations, retention basins, and treatment plant chambers in Pogradec and Gramsh.',
+    fullDescriptionAl: 'Në bashkëpunim aktiv me Albstar që nga viti 2001, Capo Construction ka realizuar armatimin e hekurit dhe strukturat e betonit për stacionet e pompimit të ujërave të zeza në Pogradec dhe Gramsh.',
     specs: [
       'Subterranean waterproof concrete pump chambers',
       'Biological treatment plant structural slabs',
@@ -238,7 +238,7 @@ export const PROJECTS_DATA: Project[] = [
       'Dhoma betoni nëntokësore me hidroizolim të lartë',
       'Pllaka strukturore për impiantet e pastrimit',
       'Montim armaturash hekuri për presion uji',
-      'Aleancë strategjike me Albstar që nga 2008'
+      'Aleancë strategjike me Albstar që nga 2001'
     ],
     client: 'Albstar SH.P.K & Municipal Water Utilities',
     image: '/images/pdf_images/extracted_p5_img1.jpeg',
@@ -496,7 +496,7 @@ export const PROJECTS_DATA: Project[] = [
 
 export const PARTNERS_LIST = [
   { name: '2T', category: 'Segmenti Qukës-Qafë Plloçë & Tuneli Panoramik' },
-  { name: 'Albstar', category: 'Stacionet e Pompimit & Rruga e Moglicës (2008-Sot)' },
+  { name: 'Albstar', category: 'Stacionet e Pompimit & Rruga e Moglicës (2001-Sot)' },
   { name: 'Gener2 & TAP', category: 'Aksi Vithkuq & Gazsjellësi TAP' },
   { name: 'PEVLAKU', category: 'Rruga Lin - Pogradec' },
   { name: 'Classic Konstruksion', category: 'Vilat Rolling Hills Sauk' },

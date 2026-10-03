@@ -81,7 +81,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <a href="tel:+355694172942" className="hover:text-white transition-colors">Tel: +355 69 417 2942</a>
               <a href="tel:+355693748971" className="hover:text-white transition-colors">Tel: +355 69 374 8971</a>
               <a href="mailto:capoconstruction@yahoo.com" className="hover:text-white transition-colors">Email: capoconstruction@yahoo.com</a>
-              <span>{lang === 'AL' ? 'Operacione që nga 2008' : 'Operations since 2008'}</span>
+              <span>{lang === 'AL' ? 'Operacione që nga 2001' : 'Operations since 2001'}</span>
             </div>
           </div>
 

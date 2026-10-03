@@ -154,7 +154,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       contact: 'Contact',
       startProject: 'Start a Project',
       downloadCv: 'Official Catalog PDF',
-      subtitle: 'ALBANIA • SINCE 2008'
+      subtitle: 'ALBANIA • SINCE 2001'
     },
     hero: {
       badge: 'ALBANIA INFRASTRUCTURE & CONSTRUCTION LEADERS',
@@ -169,13 +169,13 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       stat2: 'Scaffolding Fleet',
       stat3: 'Major Infrastructure',
       stat4: 'Active Operations',
-      stat4Value: 'Since 2008'
+      stat4Value: 'Since 2001'
     },
     about: {
       tag: '01 / ABOUT CAPO CONSTRUCTION',
       titleMain: 'Built on Experience.',
       titleAccent: 'Designed for the Future.',
-      para1: 'CAPO CONSTRUCTION is a premier Albanian construction and engineering enterprise established in 2008, with active civil infrastructure and residential operations available in every territory of Albania.',
+      para1: 'CAPO CONSTRUCTION is a premier Albanian construction and engineering enterprise established in 2001, with active civil infrastructure and residential operations available in every territory of Albania.',
       para2: 'Our team brings extensive expertise in heavy structural rebar binding, post-tensioned concrete casting, high-altitude mountain road cuts, municipal water treatment facilities, panoramic highway tunnels, and over 15,000 m² of certified system facade scaffolding. We maintain long-term strategic alliances with major contractors including 2T, Albstar, Gener2 & TAP, Classic Konstruksion, Bregu SH.A, PEVLAKU, BIGTAM, and 5D Konstruksion.',
       niptTag: 'AVAILABLE IN EVERY TERRITORY OF ALBANIA',
       specializationsTitle: 'CORE CAPABILITIES & SECTORS',
@@ -198,7 +198,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
         { value: '25+', label: 'Years of Engineering Experience', highlight: 'Quarter century of proven execution' },
         { value: '15,000 m²', label: 'Scaffolding System Capacity', highlight: 'Modern European certified scaffolding' },
         { value: '50+', label: 'Major Infrastructure Projects', highlight: 'Roads, bridges, tunnels & civil works' },
-        { value: 'Since 2008', label: 'Active Commercial Operations', highlight: 'Available in every territory of Albania' }
+        { value: 'Since 2001', label: 'Active Commercial Operations', highlight: 'Available in every territory of Albania' }
       ]
     },
     projects: {
@@ -356,7 +356,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       contact: 'Kontakt',
       startProject: 'Nis një Projekt',
       downloadCv: 'Katalogu Zyrtar (PDF)',
-      subtitle: 'SHQIPËRI • QË NGA 2008'
+      subtitle: 'SHQIPËRI • QË NGA 2001'
     },
     hero: {
       badge: 'LIDERË TË INFRASTRUKTURËS DHE NDËRTIMIT NË SHQIPËRI',
@@ -371,13 +371,13 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       stat2: 'Kapacitet Skelash',
       stat3: 'Projekte Infrastrukture',
       stat4: 'Operacione me Inovacion',
-      stat4Value: 'Që nga 2008'
+      stat4Value: 'Që nga 2001'
     },
     about: {
       tag: '01 / RRETH CAPO CONSTRUCTION',
       titleMain: 'E ndërtuar mbi përvojë.',
       titleAccent: 'E projektuar për të ardhmen.',
-      para1: 'Capo Construction ka nisur aktivitetin e ndërtimit në vitin 2008, duke u zhvilluar si një kompani e besueshme dhe e specializuar, e disponueshme në çdo territor të Shqipërisë.',
+      para1: 'Capo Construction ka nisur aktivitetin e ndërtimit në vitin 2001, duke u zhvilluar si një kompani e besueshme dhe e specializuar, e disponueshme në çdo territor të Shqipërisë.',
       para2: 'Me një qasje profesionale dhe përkushtim ndaj cilësisë, kemi ndërtuar një histori të suksesshme me mbi 15,000 m² skeleri fasade të certifikuar, 12,000 m² armaturë druri, 500 m² armaturë metalike dhe 200 m² armaturë plastike. Ruajmë bashkëpunime strategjike afatgjata me kompanitë kryesore si 2T, Albstar, Gener2 & TAP, Classic Konstruksion, Bregu SH.A, PEVLAKU, BIGTAM dhe 5D Konstruksion.',
       niptTag: 'E DISPONUESHME NË ÇDO TERRITOR TË SHQIPËRISË',
       specializationsTitle: 'KAPACITETET KRYESORE DHE SEKTORËT',
@@ -400,7 +400,7 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
         { value: '25+', label: 'Vjet Përvojë Inxhinierike', highlight: 'Çerek shekulli ekzekutim i provuar' },
         { value: '15,000 m²', label: 'Kapacitet Sisteme Skelash', highlight: 'Skela me certifikim europian' },
         { value: '50+', label: 'Projekte të Mëdha Infrastrukturore', highlight: 'Rrugë, ura, tunele dhe vepra civile' },
-        { value: 'Që nga 2008', label: 'Operacione Aktive Tregtare', highlight: 'E disponueshme në çdo territor të Shqipërisë' }
+        { value: 'Që nga 2001', label: 'Operacione Aktive Tregtare', highlight: 'E disponueshme në çdo territor të Shqipërisë' }
       ]
     },
     projects: {

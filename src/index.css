@@ -129,16 +129,15 @@ html.lenis, html.lenis body {
   letter-spacing: 0.015em;
 }
 
-/* Moncon Signature Expanding Arrow Button */
+/* Moncon Signature Expanding Arrow Button (No blur background) */
 .moncon-btn {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   padding: 13px 26px;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  background: transparent;
   color: #FFFFFF;
   font-size: 0.8125rem;
   font-weight: 500;
@@ -151,9 +150,8 @@ html.lenis, html.lenis body {
 
 .moncon-btn:hover {
   border-color: #DB192E;
-  background: rgba(219, 25, 46, 0.12);
+  background: rgba(219, 25, 46, 0.15);
   color: #FFFFFF;
-  box-shadow: 0 0 24px rgba(219, 25, 46, 0.25);
 }
 
 .moncon-btn .arrow-stem {

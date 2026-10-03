@@ -87,12 +87,12 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           <span className="text-white font-semibold">CAPO CONSTRUCTION</span>
           <span className="text-neutral-500">•</span>
           <span className="text-neutral-300">
-            {isAl ? 'SHQIPËRI • QË NGA 2008' : 'ALBANIA • EST. 2008'}
+            {isAl ? 'SHQIPËRI • QË NGA 2001' : 'ALBANIA • EST. 2001'}
           </span>
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[10px] text-white">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 border border-white/20 text-[10px] text-white">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             {isAl ? 'E DISPONUESHME NË ÇDO TERRITOR TË SHQIPËRISË' : 'AVAILABLE IN EVERY TERRITORY OF ALBANIA'}
           </span>
@@ -100,7 +100,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           {/* Video Play/Pause Toggle */}
           <button 
             onClick={togglePlay}
-            className="pointer-events-auto px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center gap-1.5 text-[10px] text-neutral-300 hover:text-white hover:bg-white/10 transition-colors"
+            className="pointer-events-auto px-2.5 py-1 rounded-full bg-black/40 border border-white/25 flex items-center gap-1.5 text-[10px] text-neutral-300 hover:text-white hover:bg-white/10 transition-colors"
             title={isPlaying ? "Pause Background Video" : "Play Background Video"}
             aria-label={isPlaying ? "Pause Background Video" : "Play Background Video"}
           >
@@ -122,7 +122,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="mb-4 sm:mb-6"
         >
-          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-neutral-200 text-xs font-mono tracking-widest uppercase">
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/30 border border-white/25 text-neutral-200 text-xs font-mono tracking-widest uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-[#DB192E]" />
             {isAl ? 'INFRASTRUKTURË • SKELERI' : 'INFRASTRUCTURE • SCAFFOLDING'}
           </span>
@@ -157,8 +157,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         >
           <p className="text-base sm:text-lg text-neutral-200 font-light leading-relaxed max-w-xl drop-shadow">
             {isAl 
-              ? 'Zgjidhje ndërtimi, infrastrukture dhe inxhinierie të ndërtuara me precizion, mbi 15,000 m² skeleri të certifikuar dhe një përvojë të provuar që nga viti 2008 në çdo territor të Shqipërisë.'
-              : 'Construction, infrastructure and engineering solutions built with precision, 15,000 m² certified facade scaffolding fleet, and over 16 years of proven execution across Albania.'
+              ? 'Zgjidhje ndërtimi, infrastrukture dhe inxhinierie të ndërtuara me precizion, mbi 15,000 m² skeleri të certifikuar dhe një përvojë të provuar që nga viti 2001 në çdo territor të Shqipërisë.'
+              : 'Construction, infrastructure and engineering solutions built with precision, 15,000 m² certified facade scaffolding fleet, and over 25 years of proven execution across Albania.'
             }
           </p>
 
@@ -181,7 +181,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               href={COMPANY_DETAILS.pdfCatalogUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3.5 rounded-full border border-white/20 bg-white/10 hover:bg-white/20 hover:border-white/40 text-xs font-mono tracking-wider uppercase text-white transition-all flex items-center gap-2 backdrop-blur-md"
+              className="px-6 py-3.5 rounded-full border border-white/35 bg-transparent hover:bg-white/10 hover:border-white/60 text-xs font-mono tracking-wider uppercase text-white transition-all flex items-center gap-2"
             >
               <FileText className="w-3.5 h-3.5 text-neutral-300" />
               <span>{isAl ? 'Katalogu PDF' : 'Catalog PDF'}</span>
@@ -226,7 +226,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
 
           <div className="flex flex-col">
             <span className="text-xl sm:text-2xl font-bold font-condensed text-white tracking-wide">
-              {isAl ? 'QË NGA 2008' : 'SINCE 2008'}
+              {isAl ? 'QË NGA 2001' : 'SINCE 2001'}
             </span>
             <span className="text-[11px] font-mono text-neutral-300 uppercase tracking-widest mt-0.5">
               {t.hero.stat4}
@@ -241,7 +241,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         <span>SCROLL</span>
         <button
           onClick={() => onNavigate('about')}
-          className="w-7 h-7 rounded-full border border-white/20 bg-black/40 backdrop-blur-sm flex items-center justify-center text-neutral-300 hover:border-white hover:text-white transition-colors cursor-pointer"
+          className="w-7 h-7 rounded-full border border-white/20 bg-black/40 flex items-center justify-center text-neutral-300 hover:border-white hover:text-white transition-colors cursor-pointer"
           aria-label="Scroll Down"
         >
           <ArrowDown className="w-3.5 h-3.5 animate-bounce" />
