@@ -97,28 +97,12 @@ export interface TranslationDictionary {
     nipt: string;
     regionsTitle: string;
     form: {
-      name: string;
-      namePlaceholder: string;
-      email: string;
-      emailPlaceholder: string;
+      firstName: string;
+      lastName: string;
       phone: string;
-      phonePlaceholder: string;
-      company: string;
-      companyPlaceholder: string;
-      sector: string;
-      desc: string;
-      descPlaceholder: string;
+      email: string;
+      message: string;
       submitBtn: string;
-      sectors: {
-        infra: string;
-        roads: string;
-        residential: string;
-        villas: string;
-        concrete: string;
-        scaffolding: string;
-        tunnels: string;
-        general: string;
-      };
       successTitle: string;
       successDesc: string;
       anotherInquiry: string;
@@ -302,28 +286,12 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       nipt: 'Available in every territory of Albania',
       regionsTitle: 'Territorial Operations & Presence',
       form: {
-        name: 'Full Name *',
-        namePlaceholder: 'e.g. Eng. Arben Hoxha',
-        email: 'Email Address *',
-        emailPlaceholder: 'arben@company.al',
-        phone: 'Phone Number',
-        phonePlaceholder: '069 ...',
-        company: 'Company / Organization',
-        companyPlaceholder: 'Engineering Firm / Developer',
-        sector: 'Project Sector',
-        desc: 'Project Description & Timeline',
-        descPlaceholder: 'Share estimated location, built-up area (m²), structural requirements...',
-        submitBtn: 'Start a Project',
-        sectors: {
-          infra: 'Municipal Infrastructure & Water',
-          roads: 'Roads, Bridges & Alpine Corridors',
-          residential: 'Residential Towers & Multi-Family',
-          villas: 'Luxury Villa & Estate Construction',
-          concrete: 'Heavy Concrete & Rebar Reinforcement',
-          scaffolding: '15,000 m² Facade Scaffolding Fleet',
-          tunnels: 'Subterranean Tunnels & Structural Works',
-          general: 'General Construction Services'
-        },
+        firstName: 'First Name*',
+        lastName: 'Last Name*',
+        phone: 'Phone',
+        email: 'Email*',
+        message: 'Message*',
+        submitBtn: 'Submit',
         successTitle: 'Inquiry Received',
         successDesc: 'Thank you for contacting CAPO CONSTRUCTION. Our senior engineering team will review your specifications and get in touch within 24 hours.',
         anotherInquiry: 'Submit Another Inquiry'
@@ -505,28 +473,12 @@ export const TRANSLATIONS: Record<Language, TranslationDictionary> = {
       nipt: 'E disponueshme në çdo territor të Shqipërisë',
       regionsTitle: 'Prania dhe Operacionet Territoriale',
       form: {
-        name: 'Emri i Plotë *',
-        namePlaceholder: 'p.sh. Ing. Arben Hoxha',
-        email: 'Adresa Email *',
-        emailPlaceholder: 'arben@kompania.al',
-        phone: 'Numri i Telefonit',
-        phonePlaceholder: '069 ...',
-        company: 'Kompania / Organizata',
-        companyPlaceholder: 'Firma Inxhinierike / Zhvillues',
-        sector: 'Sektori i Projektit',
-        desc: 'Përshkrimi i Projektit & Kohëzgjatja',
-        descPlaceholder: 'Ndani vendndodhjen e parashikuar, sipërfaqen e ndërtimit (m²), kërkesat strukturore...',
-        submitBtn: 'Nis një Projekt',
-        sectors: {
-          infra: 'Infrastrukturë Publike & Ujësjellës',
-          roads: 'Rrugë, Ura & Korridore Alpine',
-          residential: 'Kulla Banimi & Komplekse',
-          villas: 'Ndërtim Vilash Luksoze & Rezidenca',
-          concrete: 'Beton i Rëndë & Armaturë Hekuri',
-          scaffolding: 'Flotë Skelash Fasade 15,000 m²',
-          tunnels: 'Tunele Nëntokësore & Punime Strukturore',
-          general: 'Shërbime të Përgjithshme Ndërtimi'
-        },
+        firstName: 'Emri*',
+        lastName: 'Mbiemri*',
+        phone: 'Telefoni',
+        email: 'Email*',
+        message: 'Mesazhi*',
+        submitBtn: 'Dërgo',
         successTitle: 'Kërkesa u Pranua',
         successDesc: 'Faleminderit që kontaktuat CAPO CONSTRUCTION. Ekipi ynë i inxhinierisë do të shqyrtojë specifikimet tuaja dhe do t\'ju kontaktojë brenda 24 orëve.',
         anotherInquiry: 'Dërgo një Kërkesë Tjetër'

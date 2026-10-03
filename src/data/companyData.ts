@@ -506,7 +506,19 @@ export const PARTNERS_LIST = [
   { name: 'DEFEX', category: 'Depo Dinamiti Korçë' },
   { name: 'Aeroporti i Vlorës', category: 'Skeleri Fasade Terminali' },
   { name: 'Bashkia Pogradec', category: 'Infrastruktura Ujore & Tushemisht' },
-  { name: 'TAB', category: 'Struktura Betoni' }
+  { name: 'TAB', category: 'Struktura Betoni' },
+  { name: 'POWATEC Construction', category: 'Ndërtim & Infrastrukturë' },
+  { name: 'LOGER SHPK', category: 'Partneritet Strategjik' },
+  { name: 'LOFT CONSTRUCTION', category: 'Ndërtim Civil & Rezidencial' },
+  { name: 'JONI-PG', category: 'Infrastrukturë & Ndërtim' },
+  { name: 'MEGA SHPK', category: 'Partneritet Strategjik' },
+  { name: 'ALESJO', category: 'Punime Ndërtimi' },
+  { name: 'COLOMBO SHPK', category: 'Partneritet Strategjik' },
+  { name: 'NEW CONS', category: 'Ndërtim & Zhvillim' },
+  { name: 'SELMANI CONSTRUCTION', category: 'Infrastrukturë & Struktura' },
+  { name: 'KADRIA', category: 'Partneritet Strategjik' },
+  { name: 'REJ SHPK', category: 'Ndërtim & Infrastrukturë' },
+  { name: 'Ushina shpk', category: 'Partneritet Strategjik' }
 ];
 
 export const REGIONS_LIST = [
