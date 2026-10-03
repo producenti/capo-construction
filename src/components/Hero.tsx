@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ArrowDown, FileText, Play, Pause } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
@@ -13,6 +13,13 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   const { lang, t } = useLanguage();
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
+
+  // Auto-play immediately on mount without delay
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
 
   // Parallax subtle shifts
   const opacity = useTransform(scrollY, [0, 600], [1, 0.2]);
@@ -34,9 +41,9 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
   return (
     <section 
       id="hero" 
-      className="relative min-h-[100dvh] flex flex-col justify-between pt-28 sm:pt-32 pb-10 px-4 sm:px-8 lg:px-12 overflow-hidden bg-[#0A0A0C]"
+      className="relative min-h-[100dvh] flex flex-col justify-between pt-20 sm:pt-28 md:pt-32 pb-8 sm:pb-10 px-4 sm:px-8 lg:px-12 overflow-hidden bg-[#0A0A0C]"
     >
-      {/* FULL SCREEN CINEMATIC BACKGROUND VIDEO */}
+      {/* FULL SCREEN CINEMATIC BACKGROUND VIDEO (No poster - plays directly) */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         <video
           ref={videoRef}
@@ -44,7 +51,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
           loop
           muted
           playsInline
-          poster="/images/hero.png"
+          preload="auto"
           className="w-full h-full object-cover filter contrast-[1.15] brightness-[0.55]"
         >
           <source src="/videos/hero-reel.mp4" type="video/mp4" />
@@ -68,12 +75,12 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         <div className="w-px h-full bg-white" />
       </div>
 
-      {/* Top Architectural Meta Bar (Coordinates 41°19′N 19°49′E removed as requested) */}
+      {/* Top Architectural Meta Bar (Hidden on mobile as requested) */}
       <motion.div 
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="relative z-10 w-full flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/15 text-[11px] font-mono tracking-widest uppercase text-neutral-300"
+        className="relative z-10 w-full hidden md:flex flex-wrap items-center justify-between gap-4 pb-6 border-b border-white/15 text-[11px] font-mono tracking-widest uppercase text-neutral-300"
       >
         <div className="flex items-center gap-3">
           <span className="w-2 h-2 rounded-full bg-[#DB192E] animate-pulse" />
